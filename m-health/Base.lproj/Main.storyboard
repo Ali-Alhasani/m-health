@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CEK-AU-g8Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="M_HLoginViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +23,638 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clinic+logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-uK-cbR">
+                                <rect key="frame" x="14" y="74" width="348.5" height="185.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xpf-uK-cbR" secondAttribute="height" multiplier="15:8" id="LhA-Lf-F6Q"/>
+                                    <constraint firstAttribute="height" priority="500" constant="150" id="k2Z-oj-Hyh"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t38-QU-J9W">
+                                <rect key="frame" x="16" y="314" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HV-ml-ZXa">
+                                <rect key="frame" x="16" y="352" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-Gq-5pR">
+                                <rect key="frame" x="105" y="427" width="166" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="dWC-32-FXL"/>
+                                </constraints>
+                                <state key="normal" title="login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhm-qN-3j7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te2-Vw-VZh">
+                                <rect key="frame" x="105" y="477" width="166" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="O7x-JO-iXm"/>
+                                </constraints>
+                                <state key="normal" title="sgin up"/>
+                                <connections>
+                                    <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEW-UH-OkR"/>
+                                    <segue destination="pE1-27-w9j" kind="show" id="U0z-au-yee"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-4X-MQx">
+                                <rect key="frame" x="128.5" y="617" width="119" height="30"/>
+                                <state key="normal" title="forget password?"/>
+                                <connections>
+                                    <segue destination="zRJ-IR-0Ck" kind="show" id="ddi-GT-tjM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="top" secondItem="t38-QU-J9W" secondAttribute="bottom" constant="8" symbolic="YES" id="0Sp-Z4-TW9"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3U1-lB-vHT"/>
+                            <constraint firstItem="t38-QU-J9W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4dN-81-xlu"/>
+                            <constraint firstItem="t38-QU-J9W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5PF-0o-CmA"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Zk-mu-m8h"/>
+                            <constraint firstItem="te2-Vw-VZh" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="BRC-ND-ssQ"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" priority="600" id="JFe-Rg-3KT"/>
+                            <constraint firstItem="K4a-Gq-5pR" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="X1f-PB-tYk"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="XJ2-6r-dON"/>
+                            <constraint firstItem="t38-QU-J9W" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="ZGF-FM-1va"/>
+                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="f5G-oV-FlW"/>
+                            <constraint firstItem="K4a-Gq-5pR" firstAttribute="top" secondItem="5HV-ml-ZXa" secondAttribute="bottom" constant="45" id="fEv-of-zZH"/>
+                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="gvv-6P-d7R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6q9-4X-MQx" secondAttribute="bottom" constant="20" id="kzc-My-kYR"/>
+                            <constraint firstItem="te2-Vw-VZh" firstAttribute="top" secondItem="K4a-Gq-5pR" secondAttribute="bottom" constant="20" id="wZm-UU-d0J"/>
+                            <constraint firstItem="6q9-4X-MQx" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="xu8-Wn-O2U"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="SnP-dV-qJk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--HomeStoryboard-->
+        <scene sceneID="baL-3S-zOw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="CsR-6e-DsV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npF-9a-pgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="503"/>
+        </scene>
+        <!--forget password-->
+        <scene sceneID="Eef-zr-OPQ">
+            <objects>
+                <viewController id="zRJ-IR-0Ck" customClass="MHForgetPasswordViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aJf-G0-yJp"/>
+                        <viewControllerLayoutGuide type="bottom" id="WYl-GG-JzL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eQv-Tu-rWH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-xV-xBw" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="89" width="343" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-M8-07z" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="139" width="343" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W7t-M8-07z" firstAttribute="leading" secondItem="eQv-Tu-rWH" secondAttribute="leadingMargin" id="GPk-Bk-1rd"/>
+                            <constraint firstItem="oXu-xV-xBw" firstAttribute="trailing" secondItem="eQv-Tu-rWH" secondAttribute="trailingMargin" id="SQV-Rt-uw8"/>
+                            <constraint firstItem="oXu-xV-xBw" firstAttribute="top" secondItem="aJf-G0-yJp" secondAttribute="bottom" constant="25" id="Vff-CN-24q"/>
+                            <constraint firstItem="W7t-M8-07z" firstAttribute="trailing" secondItem="eQv-Tu-rWH" secondAttribute="trailingMargin" id="b1B-V9-S2p"/>
+                            <constraint firstItem="oXu-xV-xBw" firstAttribute="leading" secondItem="eQv-Tu-rWH" secondAttribute="leadingMargin" id="fEY-eH-PFh"/>
+                            <constraint firstItem="W7t-M8-07z" firstAttribute="top" secondItem="oXu-xV-xBw" secondAttribute="bottom" constant="8" symbolic="YES" id="k8T-nn-KLe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="forget password" id="XNQ-J4-aeM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFE-fu-NXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iPS-cu-g3M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CEK-AU-g8Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="skE-dc-KeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SEf-AV-8fI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qe-jZ-gmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="139"/>
+        </scene>
+        <!--Clinic Sign Up-->
+        <scene sceneID="lqa-5i-G17">
+            <objects>
+                <viewController id="pE1-27-w9j" customClass="MHSignUpClinicViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WZr-Dr-dwv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Frj-jc-cbM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H7A-c2-f0C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="046-VT-XJz" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="120" width="334" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="U5I-kq-E0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="U5I-kq-E0s"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="U5I-kq-E0s"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-u2-ABo" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="170" width="334" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="b4S-GG-5dm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="b4S-GG-5dm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="b4S-GG-5dm"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-VO-TgC" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="220" width="334" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ndG-iJ-xHH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ndG-iJ-xHH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ndG-iJ-xHH"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pit-e3-Hle" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="270" width="334" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gsg-p7-hVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gsg-p7-hVq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gsg-p7-hVq"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2a-Uf-M9Y" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="320" width="334" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="sfd-mr-7xw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sfd-mr-7xw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sfd-mr-7xw"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZN1-VO-TgC" firstAttribute="leading" secondItem="H7A-c2-f0C" secondAttribute="leadingMargin" id="0ua-9m-GjG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZN1-VO-TgC" secondAttribute="trailing" constant="9" id="6G3-HO-Q4G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pit-e3-Hle" secondAttribute="trailing" constant="9" id="CE1-ve-uBt"/>
+                            <constraint firstItem="pit-e3-Hle" firstAttribute="leading" secondItem="H7A-c2-f0C" secondAttribute="leadingMargin" id="ReP-Ls-TE4"/>
+                            <constraint firstItem="ifC-u2-ABo" firstAttribute="leading" secondItem="H7A-c2-f0C" secondAttribute="leadingMargin" id="VpX-l5-64l"/>
+                            <constraint firstItem="H2a-Uf-M9Y" firstAttribute="leading" secondItem="H7A-c2-f0C" secondAttribute="leadingMargin" id="dYM-Wj-2o7"/>
+                            <constraint firstItem="046-VT-XJz" firstAttribute="top" secondItem="WZr-Dr-dwv" secondAttribute="bottom" constant="26" id="frE-Ys-vhU"/>
+                            <constraint firstItem="ZN1-VO-TgC" firstAttribute="top" secondItem="ifC-u2-ABo" secondAttribute="bottom" constant="8" symbolic="YES" id="hAC-N4-BA7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="046-VT-XJz" secondAttribute="trailing" constant="9" id="ksD-Mb-0kw"/>
+                            <constraint firstItem="046-VT-XJz" firstAttribute="leading" secondItem="H7A-c2-f0C" secondAttribute="leadingMargin" id="lmL-Ri-HNj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ifC-u2-ABo" secondAttribute="trailing" constant="9" id="mMO-Eq-Fv8"/>
+                            <constraint firstItem="ifC-u2-ABo" firstAttribute="top" secondItem="046-VT-XJz" secondAttribute="bottom" constant="8" symbolic="YES" id="s5I-YK-bev"/>
+                            <constraint firstItem="H2a-Uf-M9Y" firstAttribute="top" secondItem="pit-e3-Hle" secondAttribute="bottom" constant="8" symbolic="YES" id="tji-0S-cTa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H2a-Uf-M9Y" secondAttribute="trailing" constant="9" id="ug2-L0-MAv"/>
+                            <constraint firstItem="pit-e3-Hle" firstAttribute="top" secondItem="ZN1-VO-TgC" secondAttribute="bottom" constant="8" symbolic="YES" id="x6D-rm-obp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clinic Sign Up" prompt="Step 1 of 3" id="gNI-NY-Z2M">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qfo-TU-qFG"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="7j1-sE-oIU">
+                            <connections>
+                                <action selector="closeSignUpWithSender:" destination="pE1-27-w9j" id="qgp-hm-RCH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Z5H-RC-nvh">
+                            <connections>
+                                <action selector="nextButton:" destination="pE1-27-w9j" id="5EL-g2-E3X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clinicAddressText" destination="H2a-Uf-M9Y" id="ugu-c6-fFB"/>
+                        <outlet property="clinicEmailText" destination="pit-e3-Hle" id="tyG-jf-zTi"/>
+                        <outlet property="clinicMobileText" destination="ZN1-VO-TgC" id="WnF-zY-Dz4"/>
+                        <outlet property="clinicNameText" destination="046-VT-XJz" id="HPb-2K-s5u"/>
+                        <outlet property="clinicPhoneText" destination="ifC-u2-ABo" id="0z5-fa-qvG"/>
+                        <outlet property="nextStep1" destination="Z5H-RC-nvh" id="qBn-4C-XvF"/>
+                        <outlet property="tap" destination="NUb-et-L6T" id="RZK-Dc-cgz"/>
+                        <segue destination="UnN-6d-35D" kind="show" identifier="toStep2" id="huh-kK-jdF">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-eR-Meq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NUb-et-L6T">
+                    <connections>
+                        <action selector="tapGestureActionWithSender:" destination="pE1-27-w9j" id="rcf-Va-N4g"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="838" y="1057"/>
+        </scene>
+        <!--Doctor Info-->
+        <scene sceneID="Kom-bd-iBK">
+            <objects>
+                <viewController id="UnN-6d-35D" customClass="MHDoctorInfoSignUpViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WvV-oe-DsW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mGA-iG-IRo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="El0-Qj-TaK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-Zx-bzc" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="154" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XqP-VT-42q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XqP-VT-42q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XqP-VT-42q"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Xt-f5j" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="254" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="45T-J5-Nyo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="45T-J5-Nyo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="45T-J5-Nyo"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLn-It-23o" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="204" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="f2z-AO-vA5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="f2z-AO-vA5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="f2z-AO-vA5"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tix-xR-n4B" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="104" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Jed-V7-u0J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jed-V7-u0J"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Jed-V7-u0J"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-XX-tdF" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="404" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SeI-de-QWD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SeI-de-QWD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SeI-de-QWD"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-55-m3v" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="354" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Dh9-1R-I3r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dh9-1R-I3r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Dh9-1R-I3r"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9V-qR-HgA" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="304" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UZg-M2-qa1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UZg-M2-qa1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UZg-M2-qa1"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Specialist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4E-jJ-9dj" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="454" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3n4-KD-pRg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3n4-KD-pRg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3n4-KD-pRg"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="O8I-XX-tdF" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="2jp-lQ-5Bi"/>
+                            <constraint firstItem="B4E-jJ-9dj" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="6Ag-bb-2gM"/>
+                            <constraint firstItem="5yA-55-m3v" firstAttribute="top" secondItem="K9V-qR-HgA" secondAttribute="bottom" constant="8" symbolic="YES" id="C0K-XU-Se4"/>
+                            <constraint firstItem="Gyj-Xt-f5j" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="GYU-jc-fsK"/>
+                            <constraint firstItem="Gyj-Xt-f5j" firstAttribute="top" secondItem="HLn-It-23o" secondAttribute="bottom" constant="8" symbolic="YES" id="Iyn-YZ-ogn"/>
+                            <constraint firstItem="HLn-It-23o" firstAttribute="top" secondItem="zYI-Zx-bzc" secondAttribute="bottom" constant="8" symbolic="YES" id="Np2-3C-urQ"/>
+                            <constraint firstItem="zYI-Zx-bzc" firstAttribute="top" secondItem="tix-xR-n4B" secondAttribute="bottom" constant="8" symbolic="YES" id="QfE-RI-glM"/>
+                            <constraint firstItem="zYI-Zx-bzc" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="TZE-a5-eAt"/>
+                            <constraint firstItem="5yA-55-m3v" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="Vb1-j7-u4U"/>
+                            <constraint firstItem="tix-xR-n4B" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="XxR-eq-qzY"/>
+                            <constraint firstItem="B4E-jJ-9dj" firstAttribute="top" secondItem="O8I-XX-tdF" secondAttribute="bottom" constant="8" symbolic="YES" id="YOz-kE-QOt"/>
+                            <constraint firstItem="O8I-XX-tdF" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="dDZ-bh-obc"/>
+                            <constraint firstItem="K9V-qR-HgA" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="iUA-KM-0Qj"/>
+                            <constraint firstItem="K9V-qR-HgA" firstAttribute="top" secondItem="Gyj-Xt-f5j" secondAttribute="bottom" constant="8" symbolic="YES" id="iis-9L-iwr"/>
+                            <constraint firstItem="5yA-55-m3v" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="jFV-Cf-cef"/>
+                            <constraint firstItem="zYI-Zx-bzc" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="jXk-nb-uau"/>
+                            <constraint firstItem="K9V-qR-HgA" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="jom-uC-9ow"/>
+                            <constraint firstItem="B4E-jJ-9dj" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="kb4-yF-QlH"/>
+                            <constraint firstItem="tix-xR-n4B" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="kjO-ea-Zc3"/>
+                            <constraint firstItem="Gyj-Xt-f5j" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="nH6-tT-rAd"/>
+                            <constraint firstItem="tix-xR-n4B" firstAttribute="top" secondItem="WvV-oe-DsW" secondAttribute="bottom" constant="10" id="pp6-Ro-6be"/>
+                            <constraint firstItem="O8I-XX-tdF" firstAttribute="top" secondItem="5yA-55-m3v" secondAttribute="bottom" constant="8" symbolic="YES" id="qsp-QF-dCk"/>
+                            <constraint firstItem="HLn-It-23o" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="rlk-0L-OLE"/>
+                            <constraint firstItem="HLn-It-23o" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="s9Z-Ep-Xtm"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="k12-Dt-eFq" appends="YES" id="V23-OS-Xx4"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doctor Info" prompt="Step 2 of 3" id="ahn-LR-6F6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7ao-5M-UwR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="oxZ-1S-TLX">
+                            <connections>
+                                <action selector="nextButton:" destination="UnN-6d-35D" id="dRG-K5-e80"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DoctorSpecialistText" destination="B4E-jJ-9dj" id="BC8-6H-DmW"/>
+                        <outlet property="doctorDescriptionText" destination="5yA-55-m3v" id="ePW-bH-BoY"/>
+                        <outlet property="doctorFirstNameText" destination="zYI-Zx-bzc" id="xAV-3p-u0q"/>
+                        <outlet property="doctorLastNameText" destination="Gyj-Xt-f5j" id="Dt7-0d-DRg"/>
+                        <outlet property="doctorMiddleNameText" destination="HLn-It-23o" id="nP2-xx-hNa"/>
+                        <outlet property="genderText" destination="K9V-qR-HgA" id="WfL-iX-Tqp"/>
+                        <outlet property="mobileNumberText" destination="O8I-XX-tdF" id="o2n-MR-F9V"/>
+                        <outlet property="socialIDText" destination="tix-xR-n4B" id="Ch4-CO-nNX"/>
+                        <outlet property="tap" destination="k12-Dt-eFq" id="xha-Nk-ppE"/>
+                        <segue destination="gTd-ph-EqJ" kind="show" identifier="toStep3" id="uFs-EF-2CH">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qim-Fp-x48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="k12-Dt-eFq">
+                    <connections>
+                        <action selector="tapGestureAction:" destination="UnN-6d-35D" id="hPK-Ns-Ynm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1556" y="1057"/>
+        </scene>
+        <!--Sign in details-->
+        <scene sceneID="l0z-43-6Or">
+            <objects>
+                <viewController id="gTd-ph-EqJ" customClass="MHSignInDetailsViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MSn-T2-VF8"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Lb-yX-YdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gPU-nI-Py7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-bT-sNU" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="144" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="D0F-Xz-v1Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D0F-Xz-v1Q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="D0F-Xz-v1Q"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUg-bc-tAd" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="194" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cSY-RS-Mjf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cSY-RS-Mjf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="cSY-RS-Mjf"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-O5-bB3" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="244" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OHf-E7-Eox"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OHf-E7-Eox"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OHf-E7-Eox"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="aHD-bT-sNU" firstAttribute="trailing" secondItem="gPU-nI-Py7" secondAttribute="trailingMargin" id="5vo-R5-h73"/>
+                            <constraint firstItem="D0f-O5-bB3" firstAttribute="leading" secondItem="gPU-nI-Py7" secondAttribute="leadingMargin" id="7tG-em-gvi"/>
+                            <constraint firstItem="D0f-O5-bB3" firstAttribute="top" secondItem="lUg-bc-tAd" secondAttribute="bottom" constant="8" symbolic="YES" id="9Qa-69-Mbu"/>
+                            <constraint firstItem="lUg-bc-tAd" firstAttribute="leading" secondItem="gPU-nI-Py7" secondAttribute="leadingMargin" id="GBy-BK-gyx"/>
+                            <constraint firstItem="D0f-O5-bB3" firstAttribute="trailing" secondItem="gPU-nI-Py7" secondAttribute="trailingMargin" id="MI9-bz-H4A"/>
+                            <constraint firstItem="aHD-bT-sNU" firstAttribute="top" secondItem="MSn-T2-VF8" secondAttribute="bottom" constant="50" id="iGZ-wE-L37"/>
+                            <constraint firstItem="lUg-bc-tAd" firstAttribute="leading" secondItem="gPU-nI-Py7" secondAttribute="leadingMargin" id="nAc-Vm-CfR"/>
+                            <constraint firstItem="lUg-bc-tAd" firstAttribute="top" secondItem="aHD-bT-sNU" secondAttribute="bottom" constant="8" symbolic="YES" id="sGK-en-VXO"/>
+                            <constraint firstItem="lUg-bc-tAd" firstAttribute="trailing" secondItem="gPU-nI-Py7" secondAttribute="trailingMargin" id="vQ1-c5-WIi"/>
+                            <constraint firstItem="aHD-bT-sNU" firstAttribute="leading" secondItem="gPU-nI-Py7" secondAttribute="leadingMargin" id="vgQ-gb-xV3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GBy-BK-gyx"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aws-Yg-xYu" appends="YES" id="FE2-bG-Rk2"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign in details" prompt="Step 3 of 3" id="jTQ-O6-5mP">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="79X-xT-xcI">
+                            <connections>
+                                <action selector="doneButton:" destination="gTd-ph-EqJ" id="K6S-Jo-Pbu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="confirmPasswordText" destination="D0f-O5-bB3" id="H8Y-UD-mWO"/>
+                        <outlet property="passwordText" destination="lUg-bc-tAd" id="cy1-OD-6EM"/>
+                        <outlet property="usernameText" destination="aHD-bT-sNU" id="wVX-vp-Z8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E41-nR-bM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aws-Yg-xYu">
+                    <connections>
+                        <action selector="tapGestureAction:" destination="gTd-ph-EqJ" id="JoN-o4-rLG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2308" y="1057"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clinic+logo2.png" width="727" height="682"/>
+    </resources>
 </document>

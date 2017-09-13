@@ -7,23 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0E27121E3636AC0062D934 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0E27111E3636AC0062D934 /* SettingsStoryboard.storyboard */; };
+		6B0E27151E36424F0062D934 /* M-HLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E27141E36424F0062D934 /* M-HLoginViewController.swift */; };
+		6B0E27181E37399C0062D934 /* MHSignUpClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E27171E37399C0062D934 /* MHSignUpClinicViewController.swift */; };
+		6B0E271A1E37E0000062D934 /* MHDoctorInfoSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E27191E37E0000062D934 /* MHDoctorInfoSignUpViewController.swift */; };
+		6B0E271C1E37E21B0062D934 /* MHSignInDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E271B1E37E21B0062D934 /* MHSignInDetailsViewController.swift */; };
+		6B3979611E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3979601E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift */; };
+		6B3979631E60586300BC9DAC /* DiagnoseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3979621E60586300BC9DAC /* DiagnoseDetails.swift */; };
+		6B4BA33B1E6029FC0029204B /* DiagnosisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BA33A1E6029FC0029204B /* DiagnosisStoryboard.storyboard */; };
+		6B4BA33D1E6030C30029204B /* MHAddCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BA33C1E6030C30029204B /* MHAddCheckViewController.swift */; };
+		6BB7ACDB1F687F58001AB239 /* Usrers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACDA1F687F58001AB239 /* Usrers.swift */; };
+		6BB7ACDD1F688515001AB239 /* Doctors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACDC1F688515001AB239 /* Doctors.swift */; };
+		6BB7ACDF1F6885FD001AB239 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACDE1F6885FD001AB239 /* Appointment.swift */; };
+		6BB7ACE11F688DB8001AB239 /* Clincs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACE01F688DB8001AB239 /* Clincs.swift */; };
+		6BB7ACE61F694860001AB239 /* MHForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACE51F694860001AB239 /* MHForgetPasswordViewController.swift */; };
+		6BB7ACE81F6948A1001AB239 /* MHDoctorHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACE71F6948A1001AB239 /* MHDoctorHomeViewController.swift */; };
+		6BB7ACEA1F694989001AB239 /* MHSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACE91F694989001AB239 /* MHSearchViewController.swift */; };
+		6BB7ACEC1F694A40001AB239 /* MHPatientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACEB1F694A40001AB239 /* MHPatientSearchViewController.swift */; };
+		6BB7ACEE1F694AAF001AB239 /* MHCheckPatientBeforeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACED1F694AAF001AB239 /* MHCheckPatientBeforeAddViewController.swift */; };
+		6BB7ACF01F694B64001AB239 /* MHAddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACEF1F694B64001AB239 /* MHAddPatientViewController.swift */; };
+		6BB7ACF21F694BD7001AB239 /* MHDoctorTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACF11F694BD7001AB239 /* MHDoctorTimeLineViewController.swift */; };
+		6BB7ACF41F694BFF001AB239 /* MHTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACF31F694BFF001AB239 /* MHTimesViewController.swift */; };
+		6BB7ACF71F69599A001AB239 /* MHUpdateClinicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACF61F69599A001AB239 /* MHUpdateClinicInfoViewController.swift */; };
+		6BB7ACF91F6959C0001AB239 /* MHChangeDoctorPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACF81F6959C0001AB239 /* MHChangeDoctorPasswordViewController.swift */; };
+		6BB7ACFB1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB7ACFA1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift */; };
 		6BC999011E276B7A00CD699B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC999001E276B7A00CD699B /* AppDelegate.swift */; };
-		6BC999031E276B7A00CD699B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC999021E276B7A00CD699B /* ViewController.swift */; };
 		6BC999061E276B7A00CD699B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC999041E276B7A00CD699B /* Main.storyboard */; };
 		6BC999091E276B7A00CD699B /* m_health.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BC999071E276B7A00CD699B /* m_health.xcdatamodeld */; };
 		6BC9990B1E276B7A00CD699B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9990A1E276B7A00CD699B /* Assets.xcassets */; };
 		6BC9990E1E276B7A00CD699B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9990C1E276B7A00CD699B /* LaunchScreen.storyboard */; };
+		6BC999181E276EF500CD699B /* clinic+logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC999171E276EF500CD699B /* clinic+logo2.png */; };
+		6BC9991A1E279B1F00CD699B /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC999191E279B1F00CD699B /* HomeStoryboard.storyboard */; };
+		8F2FB1500224488F213610DF /* Pods_m_health.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEE4A6991CFE7FCFB939EEE /* Pods_m_health.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0018B1D6CA73F5CFC80BA0C9 /* Pods-m-health.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m-health.debug.xcconfig"; path = "Pods/Target Support Files/Pods-m-health/Pods-m-health.debug.xcconfig"; sourceTree = "<group>"; };
+		6B0E27111E3636AC0062D934 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		6B0E27141E36424F0062D934 /* M-HLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "M-HLoginViewController.swift"; sourceTree = "<group>"; };
+		6B0E27171E37399C0062D934 /* MHSignUpClinicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSignUpClinicViewController.swift; sourceTree = "<group>"; };
+		6B0E27191E37E0000062D934 /* MHDoctorInfoSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDoctorInfoSignUpViewController.swift; sourceTree = "<group>"; };
+		6B0E271B1E37E21B0062D934 /* MHSignInDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSignInDetailsViewController.swift; sourceTree = "<group>"; };
+		6B3979601E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDiagnoseDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		6B3979621E60586300BC9DAC /* DiagnoseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseDetails.swift; sourceTree = "<group>"; };
+		6B4BA33A1E6029FC0029204B /* DiagnosisStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiagnosisStoryboard.storyboard; sourceTree = "<group>"; };
+		6B4BA33C1E6030C30029204B /* MHAddCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAddCheckViewController.swift; sourceTree = "<group>"; };
+		6BB7ACDA1F687F58001AB239 /* Usrers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usrers.swift; sourceTree = "<group>"; };
+		6BB7ACDC1F688515001AB239 /* Doctors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctors.swift; sourceTree = "<group>"; };
+		6BB7ACDE1F6885FD001AB239 /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		6BB7ACE01F688DB8001AB239 /* Clincs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clincs.swift; sourceTree = "<group>"; };
+		6BB7ACE51F694860001AB239 /* MHForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		6BB7ACE71F6948A1001AB239 /* MHDoctorHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDoctorHomeViewController.swift; sourceTree = "<group>"; };
+		6BB7ACE91F694989001AB239 /* MHSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSearchViewController.swift; sourceTree = "<group>"; };
+		6BB7ACEB1F694A40001AB239 /* MHPatientSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHPatientSearchViewController.swift; sourceTree = "<group>"; };
+		6BB7ACED1F694AAF001AB239 /* MHCheckPatientBeforeAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHCheckPatientBeforeAddViewController.swift; sourceTree = "<group>"; };
+		6BB7ACEF1F694B64001AB239 /* MHAddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAddPatientViewController.swift; sourceTree = "<group>"; };
+		6BB7ACF11F694BD7001AB239 /* MHDoctorTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDoctorTimeLineViewController.swift; sourceTree = "<group>"; };
+		6BB7ACF31F694BFF001AB239 /* MHTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHTimesViewController.swift; sourceTree = "<group>"; };
+		6BB7ACF61F69599A001AB239 /* MHUpdateClinicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHUpdateClinicInfoViewController.swift; sourceTree = "<group>"; };
+		6BB7ACF81F6959C0001AB239 /* MHChangeDoctorPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHChangeDoctorPasswordViewController.swift; sourceTree = "<group>"; };
+		6BB7ACFA1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHUpdateDoctorInfoViewController.swift; sourceTree = "<group>"; };
 		6BC998FD1E276B7A00CD699B /* m-health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "m-health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC999001E276B7A00CD699B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6BC999021E276B7A00CD699B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BC999051E276B7A00CD699B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BC999081E276B7A00CD699B /* m_health.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = m_health.xcdatamodel; sourceTree = "<group>"; };
 		6BC9990A1E276B7A00CD699B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC9990D1E276B7A00CD699B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BC9990F1E276B7A00CD699B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC999171E276EF500CD699B /* clinic+logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinic+logo2.png"; sourceTree = "<group>"; };
+		6BC999191E279B1F00CD699B /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		85A4DB5F413E342C4FED297D /* Pods-m-health.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m-health.release.xcconfig"; path = "Pods/Target Support Files/Pods-m-health/Pods-m-health.release.xcconfig"; sourceTree = "<group>"; };
+		BBEE4A6991CFE7FCFB939EEE /* Pods_m_health.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m_health.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,98 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2FB1500224488F213610DF /* Pods_m_health.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BBB6F28FD8341D219BC2BB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0018B1D6CA73F5CFC80BA0C9 /* Pods-m-health.debug.xcconfig */,
+				85A4DB5F413E342C4FED297D /* Pods-m-health.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		40E9B29F32A918993F78AA8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBEE4A6991CFE7FCFB939EEE /* Pods_m_health.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B0E27131E36422A0062D934 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BB7ACE41F694811001AB239 /* MainControllers */,
+				6BB7ACF51F694C36001AB239 /* HomeControllers */,
+				6BB7ACFC1F695A32001AB239 /* SettingsControllers */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		6B0E27161E36428F0062D934 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6B3979601E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift */,
+				6B3979621E60586300BC9DAC /* DiagnoseDetails.swift */,
+				6BB7ACDA1F687F58001AB239 /* Usrers.swift */,
+				6BB7ACDC1F688515001AB239 /* Doctors.swift */,
+				6BB7ACDE1F6885FD001AB239 /* Appointment.swift */,
+				6BB7ACE01F688DB8001AB239 /* Clincs.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6BB7ACE41F694811001AB239 /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B0E27141E36424F0062D934 /* M-HLoginViewController.swift */,
+				6B0E27171E37399C0062D934 /* MHSignUpClinicViewController.swift */,
+				6B0E27191E37E0000062D934 /* MHDoctorInfoSignUpViewController.swift */,
+				6B0E271B1E37E21B0062D934 /* MHSignInDetailsViewController.swift */,
+				6B4BA33C1E6030C30029204B /* MHAddCheckViewController.swift */,
+				6BB7ACE51F694860001AB239 /* MHForgetPasswordViewController.swift */,
+				6BB7ACF31F694BFF001AB239 /* MHTimesViewController.swift */,
+			);
+			name = MainControllers;
+			sourceTree = "<group>";
+		};
+		6BB7ACF51F694C36001AB239 /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BB7ACE71F6948A1001AB239 /* MHDoctorHomeViewController.swift */,
+				6BB7ACE91F694989001AB239 /* MHSearchViewController.swift */,
+				6BB7ACEB1F694A40001AB239 /* MHPatientSearchViewController.swift */,
+				6BB7ACED1F694AAF001AB239 /* MHCheckPatientBeforeAddViewController.swift */,
+				6BB7ACEF1F694B64001AB239 /* MHAddPatientViewController.swift */,
+				6BB7ACF11F694BD7001AB239 /* MHDoctorTimeLineViewController.swift */,
+			);
+			name = HomeControllers;
+			sourceTree = "<group>";
+		};
+		6BB7ACFC1F695A32001AB239 /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BB7ACF61F69599A001AB239 /* MHUpdateClinicInfoViewController.swift */,
+				6BB7ACF81F6959C0001AB239 /* MHChangeDoctorPasswordViewController.swift */,
+				6BB7ACFA1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift */,
+			);
+			name = SettingsControllers;
+			sourceTree = "<group>";
+		};
 		6BC998F41E276B7A00CD699B = {
 			isa = PBXGroup;
 			children = (
+				6BC999171E276EF500CD699B /* clinic+logo2.png */,
 				6BC998FF1E276B7A00CD699B /* m-health */,
 				6BC998FE1E276B7A00CD699B /* Products */,
+				0BBB6F28FD8341D219BC2BB6 /* Pods */,
+				40E9B29F32A918993F78AA8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +191,13 @@
 		6BC998FF1E276B7A00CD699B /* m-health */ = {
 			isa = PBXGroup;
 			children = (
+				6B0E27161E36428F0062D934 /* model */,
+				6B0E27131E36422A0062D934 /* controllers */,
 				6BC999001E276B7A00CD699B /* AppDelegate.swift */,
-				6BC999021E276B7A00CD699B /* ViewController.swift */,
 				6BC999041E276B7A00CD699B /* Main.storyboard */,
+				6BC999191E279B1F00CD699B /* HomeStoryboard.storyboard */,
+				6B0E27111E3636AC0062D934 /* SettingsStoryboard.storyboard */,
+				6B4BA33A1E6029FC0029204B /* DiagnosisStoryboard.storyboard */,
 				6BC9990A1E276B7A00CD699B /* Assets.xcassets */,
 				6BC9990C1E276B7A00CD699B /* LaunchScreen.storyboard */,
 				6BC9990F1E276B7A00CD699B /* Info.plist */,
@@ -74,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BC999121E276B7A00CD699B /* Build configuration list for PBXNativeTarget "m-health" */;
 			buildPhases = (
+				C99F57EB7DCB13A5B8AB9E3A /* [CP] Check Pods Manifest.lock */,
 				6BC998F91E276B7A00CD699B /* Sources */,
 				6BC998FA1E276B7A00CD699B /* Frameworks */,
 				6BC998FB1E276B7A00CD699B /* Resources */,
+				DEE68A5D3C693AF9511ECB3F /* [CP] Embed Pods Frameworks */,
+				86219218CB9BFA669B3F1E6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -93,6 +235,7 @@
 		6BC998F51E276B7A00CD699B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MH;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ali Al-Hassany";
@@ -127,22 +270,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0E27121E3636AC0062D934 /* SettingsStoryboard.storyboard in Resources */,
 				6BC9990E1E276B7A00CD699B /* LaunchScreen.storyboard in Resources */,
+				6B4BA33B1E6029FC0029204B /* DiagnosisStoryboard.storyboard in Resources */,
 				6BC9990B1E276B7A00CD699B /* Assets.xcassets in Resources */,
 				6BC999061E276B7A00CD699B /* Main.storyboard in Resources */,
+				6BC999181E276EF500CD699B /* clinic+logo2.png in Resources */,
+				6BC9991A1E279B1F00CD699B /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86219218CB9BFA669B3F1E6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m-health/Pods-m-health-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C99F57EB7DCB13A5B8AB9E3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEE68A5D3C693AF9511ECB3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m-health/Pods-m-health-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BC998F91E276B7A00CD699B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC999031E276B7A00CD699B /* ViewController.swift in Sources */,
+				6BB7ACF71F69599A001AB239 /* MHUpdateClinicInfoViewController.swift in Sources */,
+				6BB7ACE81F6948A1001AB239 /* MHDoctorHomeViewController.swift in Sources */,
+				6BB7ACEA1F694989001AB239 /* MHSearchViewController.swift in Sources */,
 				6BC999011E276B7A00CD699B /* AppDelegate.swift in Sources */,
+				6BB7ACDB1F687F58001AB239 /* Usrers.swift in Sources */,
+				6B0E271A1E37E0000062D934 /* MHDoctorInfoSignUpViewController.swift in Sources */,
+				6BB7ACE61F694860001AB239 /* MHForgetPasswordViewController.swift in Sources */,
+				6BB7ACF91F6959C0001AB239 /* MHChangeDoctorPasswordViewController.swift in Sources */,
+				6BB7ACDF1F6885FD001AB239 /* Appointment.swift in Sources */,
+				6B3979631E60586300BC9DAC /* DiagnoseDetails.swift in Sources */,
+				6B0E271C1E37E21B0062D934 /* MHSignInDetailsViewController.swift in Sources */,
+				6BB7ACF21F694BD7001AB239 /* MHDoctorTimeLineViewController.swift in Sources */,
+				6B0E27181E37399C0062D934 /* MHSignUpClinicViewController.swift in Sources */,
+				6BB7ACDD1F688515001AB239 /* Doctors.swift in Sources */,
+				6B4BA33D1E6030C30029204B /* MHAddCheckViewController.swift in Sources */,
+				6BB7ACFB1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift in Sources */,
+				6B0E27151E36424F0062D934 /* M-HLoginViewController.swift in Sources */,
+				6BB7ACEC1F694A40001AB239 /* MHPatientSearchViewController.swift in Sources */,
 				6BC999091E276B7A00CD699B /* m_health.xcdatamodeld in Sources */,
+				6BB7ACF01F694B64001AB239 /* MHAddPatientViewController.swift in Sources */,
+				6BB7ACEE1F694AAF001AB239 /* MHCheckPatientBeforeAddViewController.swift in Sources */,
+				6BB7ACE11F688DB8001AB239 /* Clincs.swift in Sources */,
+				6B3979611E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift in Sources */,
+				6BB7ACF41F694BFF001AB239 /* MHTimesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +477,7 @@
 		};
 		6BC999131E276B7A00CD699B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0018B1D6CA73F5CFC80BA0C9 /* Pods-m-health.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 745GS5QSVH;
@@ -274,6 +491,7 @@
 		};
 		6BC999141E276B7A00CD699B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A4DB5F413E342C4FED297D /* Pods-m-health.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 745GS5QSVH;
@@ -304,6 +522,7 @@
 				6BC999141E276B7A00CD699B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

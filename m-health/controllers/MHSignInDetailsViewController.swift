@@ -27,8 +27,37 @@ class MHSignInDetailsViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        userInfo.userName = usernameText.text!
-        userInfo.password = passwordText.text!
+        if(usernameText.text!.isEmpty || passwordText.text!.isEmpty){
+            let alert = UIAlertController(title: "Alert", message: "Please provide a username, and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }else{
+            userInfo.userName = usernameText.text!
+            userInfo.password = passwordText.text!
+            let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
+            spiningActivity.label.text = "Sending"
+            spiningActivity.detailsLabel.text = "Please Wait"
+            Connect.shared.registerdoctor(first_name: userInfo.firstName!, middle_name: userInfo.middleName!, last_name: userInfo.lastName!, password: userInfo.password!, email: userInfo.userName!, bio: userInfo.bio!, specilist: userInfo.specialist!, phone: ClincInfo.phone!, mobile: userInfo.mobile!, completed: {
+                Connect.shared.registerclinic(name: ClincInfo.clincName!, mobile: ClincInfo.mobile!, address: ClincInfo.address!, completed: {
+                    //do something
+                      MBProgressHUD.hide(for: self.view, animated: true)
+                    //self.dismiss(animated: true)
+                    self.performSegue(withIdentifier: "returnToLogin", sender: self)
+
+                }, failed: { (_ error) in
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                    let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                })
+            }, failed: { (_ error) in
+                MBProgressHUD.hide(for: self.view, animated: true)
+                let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            })
+           
+        }
     }
 
     /*

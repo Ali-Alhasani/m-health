@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3pb-lg-4gy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3pb-lg-4gy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Table View Controller-->
+        <!--Settings-->
         <scene sceneID="6Yb-N6-kMr">
             <objects>
                 <tableViewController id="3pb-lg-4gy" sceneMemberID="viewController">
@@ -25,11 +30,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlB-ub-ahu" id="slN-v3-gvu">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Drugs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPI-w8-VLO">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,11 +58,11 @@
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TEA-sG-vCi" id="mph-d2-ZDS">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update doctor info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-Kl-zSz">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -77,11 +82,11 @@
                                         <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aXq-mo-RuN" id="3tl-87-5yH">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Clinic info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-ap-beV">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -101,11 +106,11 @@
                                         <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uwV-hY-0W2" id="skJ-Uf-zaw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBC-HZ-SXr">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -129,11 +134,11 @@
                                         <rect key="frame" x="0.0" y="260" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ut8-zy-dc7" id="OTg-sS-KeM">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Weekday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H09-w8-AOH">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -153,11 +158,11 @@
                                         <rect key="frame" x="0.0" y="304" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y10-Jc-2bG" id="kP7-pj-ztB">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emy-5E-7EF">
-                                                    <rect key="frame" x="8" y="11" width="326" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="317" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -218,16 +223,16 @@
                             <outlet property="delegate" destination="3pb-lg-4gy" id="W00-yf-gBR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1xp-eq-MhU"/>
+                    <navigationItem key="navigationItem" title="Settings" id="1xp-eq-MhU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2u-0V-AP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3854" y="-196"/>
+            <point key="canvasLocation" x="4192.8000000000002" y="-196.55172413793105"/>
         </scene>
         <!--Durgs-->
         <scene sceneID="mOr-Gf-7Hc">
             <objects>
-                <viewController id="hyq-yp-Rhi" sceneMemberID="viewController">
+                <viewController id="hyq-yp-Rhi" customClass="MHViewDurgsViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IDi-qT-LPn"/>
                         <viewControllerLayoutGuide type="bottom" id="YPM-DC-VxM"/>
@@ -274,12 +279,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wd-W8-Oyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4783" y="18"/>
+            <point key="canvasLocation" x="5120.8000000000002" y="17.541229385307346"/>
         </scene>
         <!--Add New Drug-->
         <scene sceneID="yp6-zD-T6g">
             <objects>
-                <viewController id="uWT-I4-743" sceneMemberID="viewController">
+                <viewController id="uWT-I4-743" customClass="MHAddNewDrugViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w2d-ES-PtA"/>
                         <viewControllerLayoutGuide type="bottom" id="DKG-a5-SyZ"/>
@@ -289,22 +294,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Commercial Drug Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-Bs-ic9" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="55" width="343" height="42"/>
+                                <rect key="frame" x="16" y="99" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scientific Drug Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0v-q6-9ad" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="105" width="343" height="42"/>
+                                <rect key="frame" x="16" y="149" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description Drug" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTx-7w-ieG" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="155" width="343" height="42"/>
+                                <rect key="frame" x="16" y="199" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pharmacy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJ6-fw-1p4" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="205" width="343" height="42"/>
+                                <rect key="frame" x="16" y="249" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -330,26 +335,17 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Drug" id="fOI-dW-36Q">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Dyd-5P-Pze">
-                            <connections>
-                                <action selector="submitButton:" destination="uWT-I4-743" id="6fi-bO-4NH"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Dyd-5P-Pze"/>
                     </navigationItem>
                     <connections>
                         <outlet property="commercialDrugNameText" destination="G5U-Bs-ic9" id="oei-pO-PVa"/>
                         <outlet property="descriptionDrugText" destination="KTx-7w-ieG" id="vQ0-gZ-x6p"/>
                         <outlet property="pharmacyText" destination="QJ6-fw-1p4" id="DMO-AN-NOr"/>
                         <outlet property="scientificDrugNameText" destination="p0v-q6-9ad" id="fpx-8H-H8r"/>
-                        <outlet property="tap" destination="1Re-dF-7GY" id="qCT-KW-oul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMx-YI-p4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1Re-dF-7GY">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="uWT-I4-743" id="woa-Zy-kDI"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1Re-dF-7GY"/>
             </objects>
             <point key="canvasLocation" x="5378" y="900"/>
         </scene>
@@ -366,42 +362,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWC-Ze-7z8" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="347" width="343" height="42"/>
+                                <rect key="frame" x="16" y="391" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-9y-cil" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="97" width="343" height="42"/>
+                                <rect key="frame" x="16" y="141" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MFb-WQ-QYt" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="197" width="343" height="42"/>
+                                <rect key="frame" x="16" y="241" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-pf-Ysu" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="297" width="343" height="42"/>
+                                <rect key="frame" x="16" y="341" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IY0-hI-cPG" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="147" width="343" height="42"/>
+                                <rect key="frame" x="16" y="191" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-s0-Lbw" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="47" width="343" height="42"/>
+                                <rect key="frame" x="16" y="91" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-bS-NPj" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="247" width="343" height="42"/>
+                                <rect key="frame" x="16" y="291" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKB-Jh-auL" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="397" width="343" height="42"/>
+                                <rect key="frame" x="16" y="441" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -439,11 +435,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Update Doctor info" id="F6N-RZ-5me">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="5Vx-2o-cXr">
-                            <connections>
-                                <action selector="submitButton:" destination="nbT-3T-AEC" id="YXu-eM-BBl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="5Vx-2o-cXr"/>
                     </navigationItem>
                     <connections>
                         <outlet property="doctorDescription" destination="Neo-pf-Ysu" id="gPG-Hy-ihQ"/>
@@ -453,16 +445,11 @@
                         <outlet property="gender" destination="MO5-bS-NPj" id="Pdm-jd-lei"/>
                         <outlet property="mobileNumber" destination="QWC-Ze-7z8" id="Dlk-aw-inS"/>
                         <outlet property="socialID" destination="bSP-s0-Lbw" id="nF8-2p-BCc"/>
-                        <outlet property="tap" destination="Zvq-26-KpC" id="rxE-gp-wbo"/>
                         <outlet property="userNameLabel" destination="PKB-Jh-auL" id="27s-PT-j3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmb-IS-hyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Zvq-26-KpC">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="nbT-3T-AEC" id="Voe-Or-jwg"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Zvq-26-KpC"/>
             </objects>
             <point key="canvasLocation" x="3724" y="899"/>
         </scene>
@@ -479,17 +466,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your old password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-8Z-Nuq" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="46" width="343" height="42"/>
+                                <rect key="frame" x="16" y="90" width="343" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-LH-ctw" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="96" width="343" height="42"/>
+                                <rect key="frame" x="16" y="140" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter confirm new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v47-GD-Qr4" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="146" width="343" height="42"/>
+                                <rect key="frame" x="16" y="190" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -518,25 +505,16 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="Wwn-pW-Ank">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="k6h-1g-fbX">
-                            <connections>
-                                <action selector="submitButton:" destination="Z0E-fG-ZYm" id="eSX-P0-BK2"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="k6h-1g-fbX"/>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmPasswordLabel" destination="v47-GD-Qr4" id="cO8-Lv-OfO"/>
                         <outlet property="newPasswordLabel" destination="ElY-LH-ctw" id="sIf-r7-mzE"/>
                         <outlet property="oldPassordLabel" destination="6dU-8Z-Nuq" id="p5X-Ht-yvi"/>
-                        <outlet property="tap" destination="gOd-Td-Cmm" id="CiJ-Xn-cm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZN-Cr-bPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gOd-Td-Cmm">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="Z0E-fG-ZYm" id="jqO-rc-a4J"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gOd-Td-Cmm"/>
             </objects>
             <point key="canvasLocation" x="2746" y="873"/>
         </scene>
@@ -553,27 +531,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-Gi-GDp" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="52" width="343" height="42"/>
+                                <rect key="frame" x="16" y="96" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-XC-k7y" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="102" width="343" height="42"/>
+                                <rect key="frame" x="16" y="146" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="555-555-5555" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lS5-mj-Y5L" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="152" width="343" height="42"/>
+                                <rect key="frame" x="16" y="196" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-8C-CmF" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="202" width="343" height="42"/>
+                                <rect key="frame" x="16" y="246" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGA-KQ-Fmr" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="252" width="343" height="42"/>
+                                <rect key="frame" x="16" y="296" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -602,11 +580,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Update Clinic info" id="25T-gR-oI3">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="H1T-Is-Kvk">
-                            <connections>
-                                <action selector="submitButton:" destination="exS-yG-cB4" id="KmB-2R-C8L"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="H1T-Is-Kvk"/>
                     </navigationItem>
                     <connections>
                         <outlet property="clinicAddress" destination="jGA-KQ-Fmr" id="sMH-7c-y9e"/>
@@ -614,17 +588,12 @@
                         <outlet property="clinicMobile" destination="lS5-mj-Y5L" id="gEB-FE-xId"/>
                         <outlet property="clinicName" destination="kNf-Gi-GDp" id="hMn-1n-zkF"/>
                         <outlet property="clinicPhone" destination="I4J-XC-k7y" id="vu6-Yy-q3D"/>
-                        <outlet property="tap" destination="Zkj-jS-Ifh" id="yqI-hY-0Cl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yek-IH-Fpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Zkj-jS-Ifh">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="exS-yG-cB4" id="Ki3-Sv-fRk"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Zkj-jS-Ifh"/>
             </objects>
-            <point key="canvasLocation" x="2918" y="-10"/>
+            <point key="canvasLocation" x="2839" y="58"/>
         </scene>
         <!--first weekday-->
         <scene sceneID="oHD-6D-Uch">
@@ -663,6 +632,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J39-1K-0bP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4486" y="831"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v7v-Dk-SxE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LiG-2e-fXi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BU5-4W-DIg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3pb-lg-4gy" kind="relationship" relationship="rootViewController" id="tZL-G5-8NV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd7-Nn-tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3082" y="-700"/>
         </scene>
     </scenes>
 </document>

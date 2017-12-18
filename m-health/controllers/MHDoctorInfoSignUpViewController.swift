@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var userInfo: Usrers!
+var userInfo = Usrers()
 class MHDoctorInfoSignUpViewController: UIViewController {
     @IBOutlet weak var socialIDText: UITextField!
     
@@ -33,13 +33,22 @@ class MHDoctorInfoSignUpViewController: UIViewController {
     
 
     @IBAction func nextButton(_ sender: Any) {
-        userInfo.firstName = doctorFirstNameText.text!
+        if(doctorFirstNameText.text!.isEmpty || doctorMiddleNameText.text!.isEmpty || doctorLastNameText.text!.isEmpty || mobileNumberText.text!.isEmpty  || genderText.text!.isEmpty  || socialIDText.text!.isEmpty || DoctorSpecialistText.text!.isEmpty ){
+            let alert = UIAlertController(title: "Alert", message: "Please make sure that you fill all feild", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }else{
+            userInfo.firstName = doctorFirstNameText.text!
         userInfo.middleName = doctorMiddleNameText.text!
         userInfo.lastName = doctorLastNameText.text!
         userInfo.mobile = mobileNumberText.text!
         userInfo.gender = genderText.text!
         userInfo.soicalID = Int(socialIDText.text!)!
         userInfo.specialist = DoctorSpecialistText.text!
+        userInfo.bio = doctorDescriptionText.text!
+            self.performSegue(withIdentifier: "toStep3", sender: self)
+
+        }
         
     }
     /*

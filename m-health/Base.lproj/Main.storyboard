@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CEK-AU-g8Z">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CEK-AU-g8Z">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -21,51 +21,64 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clinic+logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-uK-cbR">
-                                <rect key="frame" x="14" y="74" width="348.5" height="185.5"/>
+                                <rect key="frame" x="99.333333333333329" y="108" width="176.66666666666669" height="108.66666666666669"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Xpf-uK-cbR" secondAttribute="height" multiplier="15:8" id="LhA-Lf-F6Q"/>
+                                    <constraint firstAttribute="width" secondItem="Xpf-uK-cbR" secondAttribute="height" multiplier="13:8" id="LhA-Lf-F6Q"/>
                                     <constraint firstAttribute="height" priority="500" constant="150" id="k2Z-oj-Hyh"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t38-QU-J9W">
-                                <rect key="frame" x="16" y="314" width="343" height="30"/>
+                                <rect key="frame" x="16" y="359.33333333333331" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QIw-Un-TOd"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HV-ml-ZXa">
-                                <rect key="frame" x="16" y="352" width="343" height="30"/>
+                                <rect key="frame" x="16" y="414.33333333333331" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JXm-vp-Ig7"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-Gq-5pR">
-                                <rect key="frame" x="105" y="427" width="166" height="30"/>
+                                <rect key="frame" x="104" y="499.33333333333326" width="166" height="30"/>
+                                <color key="backgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="dWC-32-FXL"/>
                                 </constraints>
-                                <state key="normal" title="login"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhm-qN-3j7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te2-Vw-VZh">
-                                <rect key="frame" x="105" y="477" width="166" height="30"/>
+                                <rect key="frame" x="104" y="549.33333333333337" width="166" height="30"/>
+                                <color key="backgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="O7x-JO-iXm"/>
                                 </constraints>
-                                <state key="normal" title="sgin up"/>
+                                <state key="normal" title="sgin up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEW-UH-OkR"/>
                                     <segue destination="pE1-27-w9j" kind="show" id="U0z-au-yee"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-4X-MQx">
-                                <rect key="frame" x="128.5" y="617" width="119" height="30"/>
+                                <rect key="frame" x="127.66666666666669" y="728" width="119" height="30"/>
                                 <state key="normal" title="forget password?"/>
                                 <connections>
                                     <segue destination="zRJ-IR-0Ck" kind="show" id="ddi-GT-tjM"/>
@@ -74,25 +87,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="top" secondItem="t38-QU-J9W" secondAttribute="bottom" constant="8" symbolic="YES" id="0Sp-Z4-TW9"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="top" secondItem="t38-QU-J9W" secondAttribute="bottom" constant="15" id="0Sp-Z4-TW9"/>
                             <constraint firstItem="5HV-ml-ZXa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3U1-lB-vHT"/>
                             <constraint firstItem="t38-QU-J9W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4dN-81-xlu"/>
                             <constraint firstItem="t38-QU-J9W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5PF-0o-CmA"/>
                             <constraint firstItem="5HV-ml-ZXa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Zk-mu-m8h"/>
                             <constraint firstItem="te2-Vw-VZh" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="BRC-ND-ssQ"/>
-                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" priority="600" id="JFe-Rg-3KT"/>
+                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8r-nx-Uqg"/>
+                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.07" priority="600" id="JFe-Rg-3KT"/>
                             <constraint firstItem="K4a-Gq-5pR" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="X1f-PB-tYk"/>
-                            <constraint firstItem="5HV-ml-ZXa" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="XJ2-6r-dON"/>
-                            <constraint firstItem="t38-QU-J9W" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="ZGF-FM-1va"/>
-                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="f5G-oV-FlW"/>
+                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="f5G-oV-FlW"/>
                             <constraint firstItem="K4a-Gq-5pR" firstAttribute="top" secondItem="5HV-ml-ZXa" secondAttribute="bottom" constant="45" id="fEv-of-zZH"/>
-                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="gvv-6P-d7R"/>
+                            <constraint firstItem="Xpf-uK-cbR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="gvv-6P-d7R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6q9-4X-MQx" secondAttribute="bottom" constant="20" id="kzc-My-kYR"/>
                             <constraint firstItem="te2-Vw-VZh" firstAttribute="top" secondItem="K4a-Gq-5pR" secondAttribute="bottom" constant="20" id="wZm-UU-d0J"/>
                             <constraint firstItem="6q9-4X-MQx" firstAttribute="centerX" secondItem="Xpf-uK-cbR" secondAttribute="centerX" id="xu8-Wn-O2U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="SnP-dV-qJk"/>
+                    <connections>
+                        <outlet property="passwordText" destination="5HV-ml-ZXa" id="Sep-bd-wmX"/>
+                        <outlet property="userNameText" destination="t38-QU-J9W" id="FQM-nV-dHk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,16 +131,16 @@
                         <viewControllerLayoutGuide type="bottom" id="WYl-GG-JzL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eQv-Tu-rWH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-xV-xBw" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="89" width="343" height="42"/>
+                                <rect key="frame" x="16" y="113" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-M8-07z" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="139" width="343" height="42"/>
+                                <rect key="frame" x="16" y="163" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -151,8 +167,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CEK-AU-g8Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="skE-dc-KeP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -172,11 +192,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Frj-jc-cbM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H7A-c2-f0C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="046-VT-XJz" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="120" width="334" height="42"/>
+                                <rect key="frame" x="16" y="148" width="334" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="U5I-kq-E0s"/>
                                 </constraints>
@@ -194,7 +214,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-u2-ABo" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="170" width="334" height="42"/>
+                                <rect key="frame" x="16" y="198" width="334" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="b4S-GG-5dm"/>
                                 </constraints>
@@ -212,7 +232,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-VO-TgC" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="220" width="334" height="42"/>
+                                <rect key="frame" x="16" y="248" width="334" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ndG-iJ-xHH"/>
                                 </constraints>
@@ -230,7 +250,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pit-e3-Hle" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="270" width="334" height="42"/>
+                                <rect key="frame" x="16" y="298" width="334" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="gsg-p7-hVq"/>
                                 </constraints>
@@ -248,7 +268,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2a-Uf-M9Y" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="320" width="334" height="42"/>
+                                <rect key="frame" x="16" y="348" width="334" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="sfd-mr-7xw"/>
                                 </constraints>
@@ -287,11 +307,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Clinic Sign Up" prompt="Step 1 of 3" id="gNI-NY-Z2M">
                         <barButtonItem key="backBarButtonItem" title="Back" id="qfo-TU-qFG"/>
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="7j1-sE-oIU">
-                            <connections>
-                                <action selector="closeSignUpWithSender:" destination="pE1-27-w9j" id="qgp-hm-RCH"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Z5H-RC-nvh">
                             <connections>
                                 <action selector="nextButton:" destination="pE1-27-w9j" id="5EL-g2-E3X"/>
@@ -304,7 +319,6 @@
                         <outlet property="clinicMobileText" destination="ZN1-VO-TgC" id="WnF-zY-Dz4"/>
                         <outlet property="clinicNameText" destination="046-VT-XJz" id="HPb-2K-s5u"/>
                         <outlet property="clinicPhoneText" destination="ifC-u2-ABo" id="0z5-fa-qvG"/>
-                        <outlet property="nextStep1" destination="Z5H-RC-nvh" id="qBn-4C-XvF"/>
                         <outlet property="tap" destination="NUb-et-L6T" id="RZK-Dc-cgz"/>
                         <segue destination="UnN-6d-35D" kind="show" identifier="toStep2" id="huh-kK-jdF">
                             <nil key="action"/>
@@ -329,11 +343,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mGA-iG-IRo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="El0-Qj-TaK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-Zx-bzc" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="154" width="343" height="42"/>
+                                <rect key="frame" x="16" y="182" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="XqP-VT-42q"/>
                                 </constraints>
@@ -351,7 +365,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Xt-f5j" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="254" width="343" height="42"/>
+                                <rect key="frame" x="16" y="282" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="45T-J5-Nyo"/>
                                 </constraints>
@@ -369,7 +383,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLn-It-23o" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="204" width="343" height="42"/>
+                                <rect key="frame" x="16" y="232" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="f2z-AO-vA5"/>
                                 </constraints>
@@ -387,7 +401,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Social ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tix-xR-n4B" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="104" width="343" height="42"/>
+                                <rect key="frame" x="16" y="132" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Jed-V7-u0J"/>
                                 </constraints>
@@ -405,7 +419,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-XX-tdF" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="404" width="343" height="42"/>
+                                <rect key="frame" x="16" y="432" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="SeI-de-QWD"/>
                                 </constraints>
@@ -423,7 +437,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-55-m3v" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="354" width="343" height="42"/>
+                                <rect key="frame" x="16" y="382" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Dh9-1R-I3r"/>
                                 </constraints>
@@ -441,7 +455,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9V-qR-HgA" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="304" width="343" height="42"/>
+                                <rect key="frame" x="16" y="332" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="UZg-M2-qa1"/>
                                 </constraints>
@@ -459,7 +473,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Specialist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4E-jJ-9dj" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="454" width="343" height="42"/>
+                                <rect key="frame" x="16" y="482" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3n4-KD-pRg"/>
                                 </constraints>
@@ -505,9 +519,6 @@
                             <constraint firstItem="HLn-It-23o" firstAttribute="trailing" secondItem="El0-Qj-TaK" secondAttribute="trailingMargin" id="rlk-0L-OLE"/>
                             <constraint firstItem="HLn-It-23o" firstAttribute="leading" secondItem="El0-Qj-TaK" secondAttribute="leadingMargin" id="s9Z-Ep-Xtm"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="k12-Dt-eFq" appends="YES" id="V23-OS-Xx4"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Doctor Info" prompt="Step 2 of 3" id="ahn-LR-6F6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="7ao-5M-UwR"/>
@@ -526,18 +537,12 @@
                         <outlet property="genderText" destination="K9V-qR-HgA" id="WfL-iX-Tqp"/>
                         <outlet property="mobileNumberText" destination="O8I-XX-tdF" id="o2n-MR-F9V"/>
                         <outlet property="socialIDText" destination="tix-xR-n4B" id="Ch4-CO-nNX"/>
-                        <outlet property="tap" destination="k12-Dt-eFq" id="xha-Nk-ppE"/>
                         <segue destination="gTd-ph-EqJ" kind="show" identifier="toStep3" id="uFs-EF-2CH">
                             <nil key="action"/>
                         </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qim-Fp-x48" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="k12-Dt-eFq">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="UnN-6d-35D" id="hPK-Ns-Ynm"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1556" y="1057"/>
         </scene>
@@ -550,11 +555,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6Lb-yX-YdL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gPU-nI-Py7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-bT-sNU" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="144" width="343" height="42"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-bT-sNU" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="172" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="D0F-Xz-v1Q"/>
                                 </constraints>
@@ -572,7 +577,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUg-bc-tAd" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="194" width="343" height="42"/>
+                                <rect key="frame" x="16" y="222" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="cSY-RS-Mjf"/>
                                 </constraints>
@@ -590,7 +595,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-O5-bB3" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="16" y="244" width="343" height="42"/>
+                                <rect key="frame" x="16" y="272" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="OHf-E7-Eox"/>
                                 </constraints>
@@ -627,9 +632,6 @@
                                 <exclude reference="GBy-BK-gyx"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="aws-Yg-xYu" appends="YES" id="FE2-bG-Rk2"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in details" prompt="Step 3 of 3" id="jTQ-O6-5mP">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="79X-xT-xcI">
@@ -642,14 +644,10 @@
                         <outlet property="confirmPasswordText" destination="D0f-O5-bB3" id="H8Y-UD-mWO"/>
                         <outlet property="passwordText" destination="lUg-bc-tAd" id="cy1-OD-6EM"/>
                         <outlet property="usernameText" destination="aHD-bT-sNU" id="wVX-vp-Z8A"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="returnToLogin" id="IeT-N1-fzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E41-nR-bM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="aws-Yg-xYu">
-                    <connections>
-                        <action selector="tapGestureAction:" destination="gTd-ph-EqJ" id="JoN-o4-rLG"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2308" y="1057"/>
         </scene>
@@ -657,4 +655,7 @@
     <resources>
         <image name="clinic+logo2.png" width="727" height="682"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SEf-AV-8fI"/>
+    </inferredMetricsTieBreakers>
 </document>

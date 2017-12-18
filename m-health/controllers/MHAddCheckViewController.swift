@@ -8,12 +8,18 @@
 
 import UIKit
 
-class MHAddCheckViewController: UIViewController {
+class MHAddCheckViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var pathologicalCaseText: UITextField!
+    @IBOutlet weak var diagnoseText: UITextField!
+    @IBOutlet weak var diagnoseDescriptionText: UITextField!
     @IBOutlet weak var durgsText: UITextField!
+    
+    var socailId:String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
     }
 
@@ -23,24 +29,43 @@ class MHAddCheckViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let plusLabel = UILabel()
-        plusLabel.text = " +"
-        plusLabel.sizeToFit()
-        let plusButton = UIButton()
-        plusButton.setImage(UIImage(named: "plus"), for: .normal)
-        durgsText.leftView = plusButton
-        durgsText.leftViewMode = UITextFieldViewMode.always
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonAction(_ sender: Any) {
+        
     }
+    
+    @IBAction func AddDrugsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "to Durgs Bulider", sender: self)
+    }
+    
+//    
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if(textField == durgsText){
+//            if(durgsText.text?.isEmpty)!{
+//
+//            }
+//        }
+//    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "nextAppointment"{
+      let vc = segue.destination as! MHNextAppointmentViewController
+            vc.diagnose = diagnoseText.text!
+            vc.diagnoseDescription = diagnoseDescriptionText.text!
+            vc.pathologicalCase = pathologicalCaseText.text!
+            vc.socailId = socailId
+            
+        }
+        
+    }
+    /*
+     MARK: - Navigation
+
+     In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
     */
 
 }

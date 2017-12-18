@@ -10,6 +10,14 @@ import UIKit
 
 class MHUpdateDoctorInfoViewController: UIViewController {
 
+    @IBOutlet weak var socialID: UITextField!
+    @IBOutlet weak var doctorFirstName: UITextField!
+    @IBOutlet weak var doctorMiddleName: UITextField!
+    @IBOutlet weak var doctorLastName: UITextField!
+    @IBOutlet weak var doctorDescription: UITextField!
+    @IBOutlet weak var mobileNumber: UITextField!
+    @IBOutlet weak var gender: UITextField!
+    @IBOutlet weak var userNameLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 

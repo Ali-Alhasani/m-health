@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        UINavigationBar.appearance().isTranslucent = false
+       UINavigationBar.appearance().barTintColor = FlatSkyBlue()
+        UINavigationBar.appearance().tintColor = UIColor.white
+           UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        
         // Override point for customization after application launch.
+        
+        //Chameleon.setGlobalThemeUsingPrimaryColor(FlatSkyBlue(), with: UIContentStyle.light)
+        //Chameleon.setGlobalThemeUsingPrimaryColor(FlatSkyBlue(), withSecondaryColor: nil , andContentStyle: UIContentStyle.light)
+       // Chameleon.setGlobalThemeUsingPrimaryColor(FlatSkyBlue(),
+                                           //       withSecondaryColor: nil,
+                                             //     andContentStyle: UIContentStyle.dark)
+        //IQKeyboardManager.sharedManager().enable = true
+
         return true
     }
     

@@ -9,7 +9,12 @@
 import UIKit
 
 class MHUpdateClinicInfoViewController: UIViewController {
-
+    
+    @IBOutlet weak var clinicName: UITextField!
+    @IBOutlet weak var clinicPhone: UITextField!
+    @IBOutlet weak var clinicMobile: UITextField!
+    @IBOutlet weak var clinicEmail: UITextField!
+    @IBOutlet weak var clinicAddress: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 

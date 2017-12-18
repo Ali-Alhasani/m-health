@@ -12,12 +12,13 @@ import Foundation
 class Appointment {
     
     
-    init(appointmentID: Int, diagnoseID: Int, description: String, note: String, status: String) {
+    init(appointmentID: Int, diagnoseID: Int, description: String, note: String, status: String, created:String) {
         self.appointmentID = appointmentID
         self.diagnoseID = diagnoseID
         self.description = description
         self.note = note
         self.status = status
+        self.created = created
     }
 
     
@@ -26,6 +27,7 @@ class Appointment {
     var description : String
     var note: String
     var status: String
+    var created:String
 
     
 }

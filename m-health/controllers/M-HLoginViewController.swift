@@ -10,6 +10,8 @@ import UIKit
 
 class M_HLoginViewController: UIViewController {
 
+    @IBOutlet weak var userNameText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +36,31 @@ class M_HLoginViewController: UIViewController {
 
     
     @IBAction func loginAction(_ sender: Any) {
+        if(userNameText.text!.isEmpty || passwordText.text!.isEmpty){
+            let alert = UIAlertController(title: "Alert", message: "Please provide a username, and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }else{
+            let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
+            spiningActivity.label.text = "Sending"
+            spiningActivity.detailsLabel.text = "Please Wait"
+            Connect.shared.login(userName: userNameText.text!, password: passwordText.text!, completed: { (_ name, _ email, _ token) in
+                 MBProgressHUD.hide(for: self.view, animated: true)
+                UserDefaults.standard.set(token, forKey: "token")
+                UserDefaults.standard.synchronize()
+                self.login()
+            }, failed: { (_ error) in
+                MBProgressHUD.hide(for: self.view, animated: true)
+                let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            })
+        }
+
+       
+    }
+    
+    func login(){
         let appDel : AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDel.loginUser()
     }

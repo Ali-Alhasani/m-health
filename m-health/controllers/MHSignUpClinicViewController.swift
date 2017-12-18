@@ -8,7 +8,7 @@
 
 import UIKit
 
-var ClincInfo: Clincs!
+var ClincInfo = Clincs()
 
 class MHSignUpClinicViewController: UIViewController {
 
@@ -33,16 +33,21 @@ class MHSignUpClinicViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeSignUp(sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
+   
     
     @IBAction func nextButton(_ sender: Any) {
-        ClincInfo.clincName = clinicNameText.text!
-        ClincInfo.phone = clinicPhoneText.text!
-        ClincInfo.address = clinicAddressText.text!
-        ClincInfo.mobile = clinicMobileText.text!
-        ClincInfo.email = clinicEmailText.text!
+        if(clinicNameText.text!.isEmpty || clinicPhoneText.text!.isEmpty || clinicAddressText.text!.isEmpty || clinicMobileText.text!.isEmpty  || clinicEmailText.text!.isEmpty){
+            let alert = UIAlertController(title: "Alert", message: "Please make sure that you fill all feild", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }else{
+            ClincInfo.clincName = clinicNameText.text!
+            ClincInfo.phone = clinicPhoneText.text!
+            ClincInfo.address = clinicAddressText.text!
+            ClincInfo.mobile = clinicMobileText.text!
+            ClincInfo.email = clinicEmailText.text!
+         self.performSegue(withIdentifier: "toStep2", sender: self)
+        }
     }
     /*
     // MARK: - Navigation

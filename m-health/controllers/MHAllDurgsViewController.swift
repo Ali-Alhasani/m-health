@@ -1,19 +1,17 @@
 //
-//  MHTimesViewController.swift
+//  MHAllDurgsViewController.swift
 //  m-health
 //
-//  Created by Ali Al-Hassany on 9/13/17.
+//  Created by Ali Al-Hassany on 11/30/17.
 //  Copyright © 2017 Ali Al-Hassany. All rights reserved.
 //
 
 import UIKit
-
-class MHTimesViewController: UIViewController,UITableViewDataSource ,UITableViewDelegate {
-
-    var dateToday : String = ""
-    var doctorappointments = [Appointment]()
+ var allDurgs = [Durgs]()
+class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableViewDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,19 +23,31 @@ class MHTimesViewController: UIViewController,UITableViewDataSource ,UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return doctorappointments.count
+    
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int{
+    
+        return allDurgs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-
-        let tmp = doctorappointments[indexPath.row].created.components(separatedBy: " ")
-        cell.textLabel?.text = doctorappointments[indexPath.row].description
-        cell.detailTextLabel?.text = tmp.last
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationBulider")
+        cell?.textLabel?.text = allDurgs[indexPath.row].name
+        return cell!
     }
     
+    
+     @IBAction func unwindFromAddVC2(_ sender: UIStoryboardSegue){
+        if sender.source is MHAddMedicationViewController {
+            if let senderVC = sender.source as? MHAddMedicationViewController {
+                
+                allDurgs.append(senderVC.durgs)
+            tableView.reloadData()
+            }
+        }
+        
+    }
+ 
     
 
     /*

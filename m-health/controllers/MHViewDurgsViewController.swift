@@ -1,22 +1,16 @@
 //
-//  MHChangeDoctorPasswordViewController.swift
+//  MHViewDurgsViewController.swift
 //  m-health
 //
-//  Created by Ali Al-Hassany on 9/13/17.
+//  Created by Ali Al-Hassany on 12/5/17.
 //  Copyright © 2017 Ali Al-Hassany. All rights reserved.
 //
 
 import UIKit
 
-class MHChangeDoctorPasswordViewController: UIViewController {
-
-    
-    
-    
-    @IBOutlet weak var oldPassordLabel: UITextField!
-    @IBOutlet weak var newPasswordLabel: UITextField!
-    @IBOutlet weak var confirmPasswordLabel: UITextField!
-    
+class MHViewDurgsViewController: UIViewController {
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 

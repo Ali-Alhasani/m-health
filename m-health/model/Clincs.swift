@@ -8,7 +8,9 @@
 
 import Foundation
 class Clincs {
-    
+    init(){
+        
+    }
     init(clincID: Int, clincName: String, mobile: String, phone: String, address: String, email: String) {
         self.clincID = clincID
         self.clincName = clincName
@@ -18,11 +20,11 @@ class Clincs {
         self.email = email
     }
 
-    var clincID: Int
-    var clincName: String
-    var mobile:String
-    var phone:String
-    var address: String
-    var email: String
+    var clincID: Int?
+    var clincName: String?
+    var mobile:String?
+    var phone:String?
+    var address: String?
+    var email: String?
 
 }

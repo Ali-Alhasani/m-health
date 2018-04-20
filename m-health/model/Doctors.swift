@@ -8,8 +8,8 @@
 
 import Foundation
 class Doctors {
-
-
+    
+    
     init(doctorsID: Int, userID: Int, clincID: Int, bio: String, specilist: String, clincName: String) {
         self.doctorsID = doctorsID
         self.userID = userID
@@ -25,6 +25,6 @@ class Doctors {
     var clincName: String
     var bio : String
     var specilist: String
-   
-
+    
+    
 }

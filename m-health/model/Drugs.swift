@@ -9,13 +9,13 @@
 import Foundation
 
 
-class Durgs{
+class Drugs{
     
     init(){
         
     }
     
-    init(name:String, dose:String, route:String, frequency:String, direction:String, duration:String, note:String, indication:String,necessaryFlag:String,startDate:String,endDate:String,internalNote:String ) {
+    init(name:String, dose:String, route:String, frequency:String, direction:String, duration:String, note:String, indication:String,necessaryFlag:String,startDate:String,endDate:String,internalNote:String,sideEffects:String,id:Int ) {
         self.name = name
         self.dose = dose
         self.route = route
@@ -28,8 +28,11 @@ class Durgs{
         self.startDate = startDate
         self.endDate = endDate
         self.internalNote = internalNote
+        self.id = id
+        self.sideEffects = sideEffects
         
     }
+    var id:Int?
     var name:String?
     var dose:String?
     var route:String?
@@ -42,5 +45,5 @@ class Durgs{
     var startDate:String?
     var endDate:String?
     var internalNote:String?
-    
+    var sideEffects:String?
 }

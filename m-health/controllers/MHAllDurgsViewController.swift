@@ -7,11 +7,22 @@
 //
 
 import UIKit
- var allDurgs = [Durgs]()
+
+
+
+protocol AllDurgsViewControllerDelegate: class {
+    
+    func AllDurgsViewController(_ controller: MHAllDurgsViewController, didFinishAdding item: [Drugs])
+    
+}
+
 class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-   
+    
+     weak var delegate: AllDurgsViewControllerDelegate?
+    
+    var allDurgs = [Drugs]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +47,10 @@ class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableV
         return cell!
     }
     
+    
+    @IBAction func doneAction(_ sender: Any) {
+        delegate?.AllDurgsViewController(self, didFinishAdding: allDurgs)
+    }
     
      @IBAction func unwindFromAddVC2(_ sender: UIStoryboardSegue){
         if sender.source is MHAddMedicationViewController {

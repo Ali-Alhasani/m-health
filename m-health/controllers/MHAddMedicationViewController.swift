@@ -9,8 +9,26 @@
 import UIKit
 
 
-class MHAddMedicationViewController: UIViewController,UITextFieldDelegate {
-    var durgs:Durgs = Durgs()
+class MHAddMedicationViewController: UIViewController,UITextFieldDelegate,MedicationBuliderViewControllerDelegate {
+    
+    func MedicationBuliderViewController(_ controller: MHMedicationBuliderViewController, didFinishAdding item: MedicationItem) {
+        DoseValue =  item.DoseValue
+         UnitValue =  item.UnitValue
+         RouteValue =  item.RouteValue
+         FrequencyValue =  item.FrequencyValue
+     
+        navigationController?.popViewController(animated: true)
+        BuliderText.text = item.DoseValue + " " +  item.UnitValue  + " " +  item.RouteValue  + " " + item.FrequencyValue
+        BuliderText.resignFirstResponder()
+
+    }
+    
+    func EmptyMedicationBuliderViewController(_ controller: MHMedicationBuliderViewController) {
+        BuliderText.resignFirstResponder()
+         navigationController?.popViewController(animated: true)
+    }
+    
+    var durgs:Drugs = Drugs()
 
     @IBOutlet weak var medicationNameText: UITextField!
     @IBOutlet weak var BuliderText: UITextField!
@@ -40,8 +58,10 @@ class MHAddMedicationViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if(textField == BuliderText){
             if(BuliderText.text?.isEmpty)!{
-            self.performSegue(withIdentifier: "to Bulider", sender: self)
+            view.endEditing(true)
+            self.performSegue(withIdentifier: "toBulider", sender: self)
             }
+           
         }
     }
     
@@ -50,6 +70,10 @@ class MHAddMedicationViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "toBulider" {
+            let controller = segue.destination as! MHMedicationBuliderViewController
+            controller.delegate = self
+           }
         if(BuliderText.text?.isEmpty)!{
           
         }else{
@@ -70,17 +94,17 @@ class MHAddMedicationViewController: UIViewController,UITextFieldDelegate {
         
     }
     
-    @IBAction func unwindFromAddVC(_ sender: UIStoryboardSegue){
-        if sender.source is MHMedicationBuliderViewController {
-            if let senderVC = sender.source as? MHMedicationBuliderViewController {
-                DoseValue =  senderVC.DoseValue
-                UnitValue =  senderVC.UnitValue
-                RouteValue =  senderVC.RouteValue
-                FrequencyValue =  senderVC.FrequencyValue
-                BuliderText.text = DoseValue! +  UnitValue! +  RouteValue! + FrequencyValue!
-            }
-        }
-    }
+//    @IBAction func unwindFromAddVC(_ sender: UIStoryboardSegue){
+//        if sender.source is MHMedicationBuliderViewController {
+//            if let senderVC = sender.source as? MHMedicationBuliderViewController {
+//                DoseValue =  senderVC.DoseValue
+//                UnitValue =  senderVC.UnitValue
+//                RouteValue =  senderVC.RouteValue
+//                FrequencyValue =  senderVC.FrequencyValue
+//                BuliderText.text = DoseValue! +  UnitValue! +  RouteValue! + FrequencyValue!
+//            }
+//        }
+//    }
     
     /*
      // MARK: - Navigation

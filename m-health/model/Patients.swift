@@ -7,21 +7,30 @@
 //
 
 import Foundation
+import SwiftyJSON
 class Patients{
-    init(socialId:String,firstName:String,middleName:String,lastName:String,maritalStatus:String,email:String,dob:String,phone:String, mobile:String,gender:String) {
-        self.socialId = socialId
-        self.firstName = firstName
-        self.middleName = middleName
-        self.lastName = lastName
-        self.maritalStatus = maritalStatus
-        self.email = email
-        self.dob = dob
-        self.phone = phone
-        self.mobile = mobile
-        self.gender = gender
-        
-    }
+
     
+    init(json: [String: Any]) {
+        let json =  JSON(json)
+        self.id = json["id"].intValue
+        self.socialId = json["social_id"].stringValue
+        self.firstName = json["first_name"].stringValue
+        self.middleName = json["middle_name"].stringValue
+        self.lastName = json["last_name"].stringValue
+        self.maritalStatus = json["patient_name"].stringValue
+        self.email = json["email"].stringValue
+        self.dob = json["DOB"].stringValue
+        self.phone = json["phone"].stringValue
+        self.mobile = json["mobile"].stringValue
+        self.gender = json["gender"].stringValue
+        self.avatar = json["avatar"].stringValue
+        self.address = json["address"].stringValue
+        
+       
+    }
+  
+    let id:Int?
     let socialId:String?
     let firstName:String?
     let middleName:String?
@@ -32,4 +41,6 @@ class Patients{
     let phone:String?
     let mobile:String?
     let gender:String?
+    let avatar:String?
+    let address:String?
 }

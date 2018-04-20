@@ -138,14 +138,14 @@ class MHPatientSearchViewController: UIViewController,UITableViewDataSource ,UIT
     
     
     func load(){
-        Connect.shared.allpatients( completed: { (_ allPatients) in
+        DataClient.shared.allpatients( completed: { (_ allPatients) in
             self.allPatients = allPatients
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }) { (_ error) in
-            let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
             

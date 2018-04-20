@@ -7,27 +7,31 @@
 //
 
 import Foundation
-
+import  SwiftyJSON
 
 class Appointment {
-    
-    
-    init(appointmentID: Int, diagnoseID: Int, description: String, note: String, status: String, created:String) {
-        self.appointmentID = appointmentID
-        self.diagnoseID = diagnoseID
-        self.description = description
-        self.note = note
-        self.status = status
-        self.created = created
-    }
 
     
+    init(json: [String: Any]) {
+        let json =  JSON(json)
+        self.appointmentID = json["appointment_id"].intValue
+        self.socialID = json["social_id"].stringValue
+        self.patientName = json["patient_name"].stringValue
+        self.gender = json["gender"].stringValue
+        self.status = json["marital_status"].stringValue
+        self.date = json["date"].stringValue
+        self.time = json["time"].stringValue
+    }
+    
+
+
     var appointmentID: Int
-    var diagnoseID:Int
-    var description : String
-    var note: String
+    var socialID:String
+    var patientName : String
+    var gender: String
     var status: String
-    var created:String
+    var time:String
+    var date:String
 
     
 }

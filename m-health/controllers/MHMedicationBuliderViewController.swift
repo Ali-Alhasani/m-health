@@ -7,7 +7,13 @@
 //
 
 import UIKit
+protocol MedicationBuliderViewControllerDelegate: class {
 
+    func MedicationBuliderViewController(_ controller: MHMedicationBuliderViewController, didFinishAdding item: MedicationItem)
+    
+     func EmptyMedicationBuliderViewController(_ controller: MHMedicationBuliderViewController)
+   
+}
 class MHMedicationBuliderViewController: UIViewController,UITableViewDataSource ,UITableViewDelegate{
 
  
@@ -16,14 +22,20 @@ class MHMedicationBuliderViewController: UIViewController,UITableViewDataSource 
     var Unit:[String]?
     var Route:[String]?
     var Frequency:[String]?
-    var DoseValue:String?
-    var UnitValue:String?
-    var RouteValue:String?
-    var FrequencyValue:String?
+//    var DoseValue:String?
+//    var UnitValue:String?
+//    var RouteValue:String?
+//    var FrequencyValue:String?
+    let item = MedicationItem()
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buliderLabel: UILabel!
     @IBOutlet weak var buliderSegment: UISegmentedControl!
+    
+    weak var delegate: MedicationBuliderViewControllerDelegate?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,29 +102,28 @@ class MHMedicationBuliderViewController: UIViewController,UITableViewDataSource 
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "show", sender: nil)
-        
         switch buliderSegment.selectedSegmentIndex {
         case 0:
-            DoseValue = Dose![indexPath.row]
-            buliderLabel.text = DoseValue
+            item.DoseValue = Dose![indexPath.row]
+            buliderLabel.text =  item.DoseValue  + " " +  item.UnitValue + " " +  item.RouteValue + " " +  item.FrequencyValue
             break
         case 1:
-            UnitValue = Unit![indexPath.row]
-            buliderLabel.text = buliderLabel.text! + " " + UnitValue!
+            item.UnitValue = Unit![indexPath.row]
+            buliderLabel.text = item.DoseValue  + " " +  item.UnitValue + " " +  item.RouteValue + " " +  item.FrequencyValue
             break
         case 2:
-           RouteValue = Route![indexPath.row]
-            buliderLabel.text = buliderLabel.text! + " " + RouteValue!
+            item.RouteValue = Route![indexPath.row]
+            buliderLabel.text = item.DoseValue  + " " +  item.UnitValue + " " +  item.RouteValue + " " +  item.FrequencyValue
             break
         case 3:
-            FrequencyValue = Frequency![indexPath.row]
-              buliderLabel.text = buliderLabel.text! + " " + FrequencyValue!
+            item.FrequencyValue = Frequency![indexPath.row]
+            buliderLabel.text = item.DoseValue  + " " +  item.UnitValue + " " +  item.RouteValue + " " +  item.FrequencyValue
             break
         case 4:
-            DoseValue = Dose![indexPath.row]
+            //item!.DoseValue = Dose![indexPath.row]
             break
         case 5:
-            DoseValue = Dose![indexPath.row]
+             //item!.DoseValue = Dose![indexPath.row]
             break
         default:
             break
@@ -121,7 +132,15 @@ class MHMedicationBuliderViewController: UIViewController,UITableViewDataSource 
     }
     
     
+    @IBAction func saveButtonAction(_ sender: Any) {
+     delegate?.MedicationBuliderViewController(self, didFinishAdding: item)
+       
+       
+    }
     
+    @IBAction func cancelButtonAction(_ sender: Any) {
+         delegate?.EmptyMedicationBuliderViewController(self)
+    }
     
     
     

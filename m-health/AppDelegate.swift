@@ -8,9 +8,9 @@
 
 import UIKit
 import CoreData
-import ChameleonFramework
 import IQKeyboardManagerSwift
-
+//21.0    60.0    86.0
+//53    153    219
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -20,9 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UINavigationBar.appearance().isTranslucent = false
-       UINavigationBar.appearance().barTintColor = FlatSkyBlue()
+       UINavigationBar.appearance().barTintColor = UIColor(red: 0.21, green: 0.60, blue: 0.86, alpha: 1)
+      //  UIColor(red: 21.0, green: 60.0, blue: 86.0, alpha: 1)
+     
         UINavigationBar.appearance().tintColor = UIColor.white
-           UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+       UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        UITabBar.appearance().tintColor = UIColor(red: 0.21, green: 0.60, blue: 0.86, alpha: 1)
         
         
         // Override point for customization after application launch.
@@ -32,20 +35,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // Chameleon.setGlobalThemeUsingPrimaryColor(FlatSkyBlue(),
                                            //       withSecondaryColor: nil,
                                              //     andContentStyle: UIContentStyle.dark)
+          IQKeyboardManager.shared.enable = true
         //IQKeyboardManager.sharedManager().enable = true
-
+        loginUser()
         return true
     }
     
     func loginUser(){
+        SessionManager.loadSessionManager()
+        if SessionManager.shared.isDoctorLogged {
         let main = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         let viewController = main.instantiateInitialViewController()
 
         //let navigationController = UINavigationController(rootViewController: main)
         self.window?.rootViewController? = viewController!
+        }
         
     }
     
+    
+      func logout(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = main.instantiateInitialViewController()
+        
+        //let navigationController = UINavigationController(rootViewController: main)
+        self.window?.rootViewController? = viewController!
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

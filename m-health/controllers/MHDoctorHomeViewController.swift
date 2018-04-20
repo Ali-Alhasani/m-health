@@ -26,6 +26,7 @@ class MHDoctorHomeViewController: UIViewController,UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         load()
+       
         timeline.backgroundColor = .white
         timeline.bubbleColor = .init(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         timeline.titleColor = .black
@@ -113,14 +114,14 @@ class MHDoctorHomeViewController: UIViewController,UITableViewDelegate, UITableV
     
     func load(){
 
-        Connect.shared.getdoctorPorfile(completed: { (_ name,_ address,_ clinicName,_ bio) in
+        DataClient.shared.getdoctorPorfile(completed: { (_ name,_ address,_ clinicName,_ bio) in
             self.doctorNameLabel.text = name
             self.doctorSpecialistLabel.text = bio
             self.doctorClinicNameLabel.text = clinicName
             self.doctorAddressLabel.text = address
             
         }) { (_ error) in
-            let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         }

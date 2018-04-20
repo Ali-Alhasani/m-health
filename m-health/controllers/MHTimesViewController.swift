@@ -32,13 +32,31 @@ class MHTimesViewController: UIViewController,UITableViewDataSource ,UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
 
-        let tmp = doctorappointments[indexPath.row].created.components(separatedBy: " ")
-        cell.textLabel?.text = doctorappointments[indexPath.row].description
-        cell.detailTextLabel?.text = tmp.last
+        cell.textLabel?.text = doctorappointments[indexPath.row].patientName
+        cell.detailTextLabel?.text = doctorappointments[indexPath.row].time
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        self.performSegue(withIdentifier: "toPatientAppointment", sender: indexPath)
+    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPatientAppointment" {
+            let tabBarC : UITabBarController = segue.destination as! UITabBarController
+            let navVc = tabBarC.viewControllers!.first as! UINavigationController
+            let targetController = navVc.viewControllers.first as! MHPatientInfoViewController
+//            let index = tableView.indexPathForSelectedItems?.first {
+//                destine
+//            }
+            if let index = sender as? IndexPath {
+                   targetController.socailId = self.doctorappointments[index.row].socialID
+            }
+         
+        }
+    }
+
 
     /*
     // MARK: - Navigation

@@ -142,13 +142,13 @@ class MHAddPatientViewController: UIViewController,UITextFieldDelegate,UINavigat
             let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
             spiningActivity.label.text = "Sending"
             spiningActivity.detailsLabel.text = "Please Wait"
-            Connect.shared.addpatient(idNumber: idNumberText.text!, firstName: firstNameText.text!, middleName: middleNameText.text!, lastName: lastNameText.text!, address: addressText.text!, maritalStatus: maritalStatusText.text!, mobileNumber: mobileNumberText.text!, phoneNumber: phoneNumberText.text!, gender: genderText.text!, email: emailText.text!, birthday: birthdayText.text!, completed: { (_ socialId,_ firstName , _ lastName) in
+            DataClient.shared.addpatient(idNumber: idNumberText.text!, firstName: firstNameText.text!, middleName: middleNameText.text!, lastName: lastNameText.text!, address: addressText.text!, maritalStatus: maritalStatusText.text!, mobileNumber: mobileNumberText.text!, phoneNumber: phoneNumberText.text!, gender: genderText.text!, email: emailText.text!, birthday: birthdayText.text!, completed: { (_ socialId,_ firstName , _ lastName) in
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.performSegue(withIdentifier: "toDiagnose", sender: self)
                 
             }, failed: { (_ error) in
                 MBProgressHUD.hide(for: self.view, animated: true)
-                let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true)
             })

@@ -43,17 +43,17 @@ class MHCheckPatientBeforeAddViewController: UIViewController {
         //        let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
         //        spiningActivity.label.text = "Sending"
         //        spiningActivity.detailsLabel.text = "Please Wait"
-        Connect.shared.getPatientBySocialID(idNumber: IdentificationNumberLabel.text!, completed: { (_ firstName,_ middleName,_ lastName,_ address,_ maritalStatus,_ mobileNumber,_ phoneNumber,_ gender,_ email,_ birthday) in
-            self.firstName = firstName
-            self.middleName = middleName
-            self.lastName = lastName
-            self.address = address
-            self.maritalStatus = maritalStatus
-            self.mobileNumber = mobileNumber
-            self.phoneNumber = phoneNumber
-            self.gender = gender
-            self.email = email
-            self.birthday = birthday
+        DataClient.shared.getPatientBySocialID(idNumber: IdentificationNumberLabel.text!, completed: { (_ patient) in
+            self.firstName = patient.firstName
+            self.middleName = patient.middleName
+            self.lastName = patient.lastName
+            self.address = patient.address
+            self.maritalStatus = patient.maritalStatus
+            self.mobileNumber = patient.mobile
+            self.phoneNumber = patient.phone
+            self.gender = patient.gender
+            self.email = patient.email
+            self.birthday = patient.dob
             self.performSegue(withIdentifier: "AddPatient", sender: self)
             
         }) { (_ error) in

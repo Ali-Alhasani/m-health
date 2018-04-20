@@ -19,12 +19,12 @@ class Clincs {
         self.address = address
         self.email = email
     }
-
+    
     var clincID: Int?
     var clincName: String?
     var mobile:String?
     var phone:String?
     var address: String?
     var email: String?
-
+    
 }

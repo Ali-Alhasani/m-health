@@ -32,7 +32,7 @@ class Usrers {
         self.rememberToken = rememberToken
         self.specialist = specialist
         self.bio = bio
-
+        
     }
     
     

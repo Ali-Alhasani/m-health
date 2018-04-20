@@ -18,9 +18,11 @@ class MHDoctorTimeLineViewController: UIViewController, FSCalendarDataSource, FS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SessionManager.loadCalender()
         load()
         print(doctorappointments)
         view.addSubview(calendar)
+        
         //        let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
         //        calendar.dataSource = self
         //        calendar.delegate = self
@@ -32,7 +34,17 @@ class MHDoctorTimeLineViewController: UIViewController, FSCalendarDataSource, FS
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         view.addSubview(calendar)
+        if SessionManager.shared.scroll == 2 {
         calendar.scrollDirection = .horizontal
+        }else {
+             calendar.scrollDirection = .vertical
+         
+        }
+        
+        calendar.firstWeekday = UInt(SessionManager.shared.weekEndDay)
+      
+        
+        
         
         //alendar.firstWeekday = UInt(wd)
         
@@ -61,9 +73,9 @@ class MHDoctorTimeLineViewController: UIViewController, FSCalendarDataSource, FS
         //let day: Int! = calendar.day(of: date)
         let day = self.formatter.string(from: date)
         for item in doctorappointments {
-            let token = item.created.components(separatedBy: " ")
+            let date = item.date
             
-            if(day == token.first){
+            if(day == date){
                 //            if( day == (item as AnyObject).value("Date")! as! String){
                 return 1
                 
@@ -100,10 +112,10 @@ class MHDoctorTimeLineViewController: UIViewController, FSCalendarDataSource, FS
     
     
     func load(){
-        Connect.shared.getDoctorAppointments(flag: 3, completed: { (_ doctorappointments) in
+        DataClient.shared.getDoctorAppointments(flag: 3, completed: { (_ doctorappointments) in
             self.doctorappointments = doctorappointments
         }) { (_ error) in
-            let alert = UIAlertController(title: "Alert", message: error, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Alert", message: error.message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
             

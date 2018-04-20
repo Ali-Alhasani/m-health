@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8e-Kk-xc5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8e-Kk-xc5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,7 +105,7 @@
         <!--History-->
         <scene sceneID="G52-hm-vxZ">
             <objects>
-                <viewController id="Aow-yq-bk9" sceneMemberID="viewController">
+                <viewController id="Aow-yq-bk9" customClass="MHPatientHistoryViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EFa-u9-Gmn"/>
                         <viewControllerLayoutGuide type="bottom" id="go7-DS-8zy"/>
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-DE-4FY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551.1999999999998" y="506.89655172413796"/>
+            <point key="canvasLocation" x="3431" y="507"/>
         </scene>
         <!--Diagnose-->
         <scene sceneID="6VR-Y3-LWH">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZ6-ow-Kyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4304.8000000000002" y="506.89655172413796"/>
+            <point key="canvasLocation" x="4460" y="507"/>
         </scene>
         <!--Info-->
         <scene sceneID="dYP-bS-aic">
@@ -248,10 +248,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdE-lZ-Que">
                                 <rect key="frame" x="273" y="72" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="e7l-a4-ESn"/>
                                 </constraints>
-                                <state key="normal" title="Start Visit"/>
+                                <state key="normal" title="Start Visit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="startVistButton:" destination="EcF-YD-s1k" eventType="touchUpInside" id="nXs-ET-jPf"/>
                                     <segue destination="f6S-n3-V4g" kind="show" identifier="addCheck" id="CmY-jR-Hb3"/>
@@ -259,10 +262,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eni-YM-EsV">
                                 <rect key="frame" x="273" y="113" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="jHx-Vr-hB6"/>
                                 </constraints>
-                                <state key="normal" title="vitals"/>
+                                <state key="normal" title="vitals">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="FHO-RT-41V" kind="show" id="hqQ-6I-4JQ"/>
                                 </connections>
@@ -313,9 +319,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="avatarImage" destination="mS5-Q1-hDK" id="mku-Gb-iNo"/>
                         <outlet property="birthdayLabel" destination="lr4-dM-h1Z" id="v5O-xT-rWq"/>
                         <outlet property="genderLabel" destination="zcX-0D-3jt" id="eXO-aT-ivP"/>
                         <outlet property="nameLabel" destination="yXE-T6-35G" id="zyl-Te-uxV"/>
+                        <outlet property="startVisitButton" destination="YdE-lZ-Que" id="Qyp-XN-fLK"/>
+                        <outlet property="vitalsButton" destination="eni-YM-EsV" id="dIU-XB-fTE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPI-Qy-RkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -694,7 +703,7 @@
         <!--Laboratory-->
         <scene sceneID="OSK-Z3-Js1">
             <objects>
-                <viewController id="yZu-fP-jA2" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="yZu-fP-jA2" customClass="MHAddLaboratoryViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jy8-uf-M7m"/>
                         <viewControllerLayoutGuide type="bottom" id="0NT-We-xsY"/>
@@ -703,34 +712,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Laboratory Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdW-ff-z6o">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Laboratory Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdW-ff-z6o" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="80" width="343" height="42"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hq5-MV-wzR">
-                                <rect key="frame" x="16" y="110" width="343" height="30"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-Lw-OAe" customClass="TextView" customModule="m_health" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Dtm-dU-dhb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Diagnose Description"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conrnerRaduis">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hq5-MV-wzR" firstAttribute="leading" secondItem="3Xj-hD-1zT" secondAttribute="leadingMargin" id="9BA-Db-UHj"/>
-                            <constraint firstItem="jdW-ff-z6o" firstAttribute="top" secondItem="jy8-uf-M7m" secondAttribute="bottom" constant="8" id="CQw-Da-B5w"/>
+                            <constraint firstItem="FqO-Lw-OAe" firstAttribute="top" secondItem="jdW-ff-z6o" secondAttribute="bottom" constant="10" id="17H-ca-Fdp"/>
+                            <constraint firstItem="jdW-ff-z6o" firstAttribute="top" secondItem="jy8-uf-M7m" secondAttribute="bottom" constant="16" id="CQw-Da-B5w"/>
                             <constraint firstItem="jdW-ff-z6o" firstAttribute="leading" secondItem="3Xj-hD-1zT" secondAttribute="leadingMargin" id="EBa-BQ-Z0R"/>
-                            <constraint firstItem="hq5-MV-wzR" firstAttribute="top" secondItem="jdW-ff-z6o" secondAttribute="bottom" constant="8" id="XXq-ZL-7wH"/>
+                            <constraint firstItem="FqO-Lw-OAe" firstAttribute="trailing" secondItem="3Xj-hD-1zT" secondAttribute="trailingMargin" id="eSz-1c-W6H"/>
                             <constraint firstItem="jdW-ff-z6o" firstAttribute="trailing" secondItem="3Xj-hD-1zT" secondAttribute="trailingMargin" id="eub-R9-wVv"/>
-                            <constraint firstItem="hq5-MV-wzR" firstAttribute="trailing" secondItem="3Xj-hD-1zT" secondAttribute="trailingMargin" id="z55-yk-XNo"/>
+                            <constraint firstItem="FqO-Lw-OAe" firstAttribute="leading" secondItem="3Xj-hD-1zT" secondAttribute="leadingMargin" id="rGV-Op-jbx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Laboratory" id="txN-qN-sgH"/>
+                    <navigationItem key="navigationItem" title="Laboratory" id="txN-qN-sgH">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="frx-zd-FFg">
+                            <connections>
+                                <action selector="addButtonAction:" destination="yZu-fP-jA2" id="vze-1f-RNU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameText" destination="jdW-ff-z6o" id="hh6-GW-dUw"/>
+                        <outlet property="noteText" destination="FqO-Lw-OAe" id="W5j-ah-FsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-gk-o3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4183.1999999999998" y="2555.1724137931037"/>
+            <point key="canvasLocation" x="4158" y="2927"/>
         </scene>
         <!--New Appointment -->
         <scene sceneID="6XY-SY-hVO">
@@ -744,30 +778,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Oo-Mcc">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Oo-Mcc" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="78" width="343" height="42"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIL-1Q-Cdd">
-                                <rect key="frame" x="16" y="110" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIL-1Q-Cdd" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="130" width="343" height="42"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCH-mk-scV">
-                                <rect key="frame" x="124" y="193" width="126" height="30"/>
-                                <state key="normal" title="Add post Request "/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-g1-9tr">
+                                <rect key="frame" x="39" y="222" width="297" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-cd-bdm">
+                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Post Laboratory" image="laboratory">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yZu-fP-jA2" kind="show" identifier="toLaboratory" id="deJ-wA-80O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi1-C8-ZCP">
+                                        <rect key="frame" x="152.5" y="0.0" width="144.5" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Post Radiology" image="radiology">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="M37-aV-dwN" kind="show" identifier="toRadiology" id="pAB-OC-cuk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="XMG-4P-8lI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HIB-g1-9tr" firstAttribute="top" secondItem="FIL-1Q-Cdd" secondAttribute="bottom" constant="50" id="4dN-6h-kBf"/>
                             <constraint firstItem="FIL-1Q-Cdd" firstAttribute="trailing" secondItem="5eI-Vr-tJs" secondAttribute="trailingMargin" id="AZl-Hp-a3l"/>
-                            <constraint firstItem="cCH-mk-scV" firstAttribute="top" secondItem="FIL-1Q-Cdd" secondAttribute="bottom" constant="53" id="HcY-n3-Cr5"/>
-                            <constraint firstItem="Lag-Oo-Mcc" firstAttribute="top" secondItem="PcK-e6-RIk" secondAttribute="bottom" constant="8" id="Heq-VY-Ajq"/>
-                            <constraint firstItem="FIL-1Q-Cdd" firstAttribute="top" secondItem="Lag-Oo-Mcc" secondAttribute="bottom" constant="8" id="VqA-pF-msm"/>
-                            <constraint firstItem="cCH-mk-scV" firstAttribute="centerX" secondItem="5eI-Vr-tJs" secondAttribute="centerX" id="euQ-j6-1I2"/>
+                            <constraint firstItem="Lag-Oo-Mcc" firstAttribute="top" secondItem="PcK-e6-RIk" secondAttribute="bottom" constant="14" id="Heq-VY-Ajq"/>
+                            <constraint firstItem="HIB-g1-9tr" firstAttribute="leading" secondItem="5eI-Vr-tJs" secondAttribute="leadingMargin" constant="23" id="QaS-a7-UPg"/>
+                            <constraint firstItem="FIL-1Q-Cdd" firstAttribute="top" secondItem="Lag-Oo-Mcc" secondAttribute="bottom" constant="10" id="VqA-pF-msm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HIB-g1-9tr" secondAttribute="trailing" constant="23" id="X20-9j-7ix"/>
                             <constraint firstItem="Lag-Oo-Mcc" firstAttribute="leading" secondItem="5eI-Vr-tJs" secondAttribute="leadingMargin" id="mi6-uL-t5m"/>
                             <constraint firstItem="FIL-1Q-Cdd" firstAttribute="leading" secondItem="5eI-Vr-tJs" secondAttribute="leadingMargin" id="ogu-L2-Bvu"/>
                             <constraint firstItem="Lag-Oo-Mcc" firstAttribute="trailing" secondItem="5eI-Vr-tJs" secondAttribute="trailingMargin" id="zHj-AZ-xWt"/>
@@ -781,8 +840,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="laboratoryButton" destination="Onf-cd-bdm" id="IST-wm-pqr"/>
                         <outlet property="nextAppointmentDateText" destination="Lag-Oo-Mcc" id="EHt-01-Ii3"/>
                         <outlet property="nextAppointmentTimeText" destination="FIL-1Q-Cdd" id="vbN-V6-ij2"/>
+                        <outlet property="radidologyButton" destination="gi1-C8-ZCP" id="g9P-4w-YvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rz1-gn-NVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -792,7 +853,7 @@
         <!--Radiology-->
         <scene sceneID="fWz-J3-g1T">
             <objects>
-                <viewController id="M37-aV-dwN" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="M37-aV-dwN" customClass="MHAddRadiologyViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HhB-hf-meZ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZeW-kz-Vw2"/>
@@ -801,34 +862,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Radiology Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-Vk-7H8">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Radiology Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-Vk-7H8" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="80" width="343" height="42"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-FX-mre">
-                                <rect key="frame" x="16" y="110" width="343" height="30"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pXc-cv-9c2" customClass="TextView" customModule="m_health" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lwV-bf-lAb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Diagnose Description"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conrnerRaduis">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pXc-cv-9c2" firstAttribute="trailing" secondItem="yeT-qr-Cao" secondAttribute="trailingMargin" id="0on-I3-9xE"/>
                             <constraint firstItem="rF5-Vk-7H8" firstAttribute="trailing" secondItem="yeT-qr-Cao" secondAttribute="trailingMargin" id="F15-bc-SI5"/>
-                            <constraint firstItem="XS0-FX-mre" firstAttribute="leading" secondItem="yeT-qr-Cao" secondAttribute="leadingMargin" id="HUt-qa-wk5"/>
-                            <constraint firstItem="rF5-Vk-7H8" firstAttribute="top" secondItem="HhB-hf-meZ" secondAttribute="bottom" constant="8" id="MUG-se-UcQ"/>
+                            <constraint firstItem="pXc-cv-9c2" firstAttribute="top" secondItem="rF5-Vk-7H8" secondAttribute="bottom" constant="10" id="HXc-UD-ile"/>
+                            <constraint firstItem="rF5-Vk-7H8" firstAttribute="top" secondItem="HhB-hf-meZ" secondAttribute="bottom" constant="16" id="MUG-se-UcQ"/>
                             <constraint firstItem="rF5-Vk-7H8" firstAttribute="leading" secondItem="yeT-qr-Cao" secondAttribute="leadingMargin" id="nGF-XH-CKf"/>
-                            <constraint firstItem="XS0-FX-mre" firstAttribute="top" secondItem="rF5-Vk-7H8" secondAttribute="bottom" constant="8" id="s25-z5-cZJ"/>
-                            <constraint firstItem="XS0-FX-mre" firstAttribute="trailing" secondItem="yeT-qr-Cao" secondAttribute="trailingMargin" id="sqC-oT-IxU"/>
+                            <constraint firstItem="pXc-cv-9c2" firstAttribute="leading" secondItem="yeT-qr-Cao" secondAttribute="leadingMargin" id="uh5-BV-tDT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Radiology" id="eNE-ij-NtK"/>
+                    <navigationItem key="navigationItem" title="Radiology" id="eNE-ij-NtK">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="qrc-Aa-Tbf">
+                            <connections>
+                                <action selector="addButtonAction:" destination="M37-aV-dwN" id="K7U-Xq-qh1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameText" destination="rF5-Vk-7H8" id="ifT-iY-xAX"/>
+                        <outlet property="noteText" destination="pXc-cv-9c2" id="Qcs-g8-OSt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPz-0g-7Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488.8000000000002" y="2554.2728635682161"/>
+            <point key="canvasLocation" x="5464.8000000000002" y="2926.6866566716644"/>
         </scene>
         <!--Add Check-->
         <scene sceneID="fui-9M-cSA">
@@ -843,69 +929,107 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="diagnose" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ra-AE-WWm" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="8" y="122" width="359" height="42"/>
+                                <rect key="frame" x="8" y="128" width="359" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pathological Case" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0T-2x-7yj" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="8" y="72" width="359" height="42"/>
+                                <rect key="frame" x="8" y="76" width="359" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="diagnose Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufH-Rc-DqK" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="8" y="172" width="359" height="70"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JRz-IV-3P2" customClass="TextView" customModule="m_health" customModuleProvider="target">
+                                <rect key="frame" x="8" y="180" width="359" height="248"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="aFZ-1x-u3E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="iif-RH-SFq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-cL-CwZ">
-                                <rect key="frame" x="129" y="527" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Clinical photo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-Pb-Aih">
-                                <rect key="frame" x="151" y="318" width="73" height="30"/>
-                                <state key="normal" title="Add Durgs"/>
-                                <connections>
-                                    <action selector="AddDrugsButton:" destination="f6S-n3-V4g" eventType="touchUpInside" id="PqD-Oo-JVn"/>
-                                </connections>
-                            </button>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Diagnose Description"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conrnerRaduis">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G19-w2-3Ro">
+                                <rect key="frame" x="16" y="453" width="343" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-mO-if0">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Clinical Photo" image="clinicalPhoto">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hv-uC-KKf">
+                                        <rect key="frame" x="116" y="0.0" width="111" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Add drugs" image="drugs">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AddDrugsButton:" destination="f6S-n3-V4g" eventType="touchUpInside" id="h69-WN-w3q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-4H-WHt">
+                                        <rect key="frame" x="232" y="0.0" width="111" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Upload Photo" image="photo">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="94g-ut-9rj"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Ra-AE-WWm" firstAttribute="top" secondItem="X0T-2x-7yj" secondAttribute="bottom" constant="8" id="04Q-K0-BVw"/>
-                            <constraint firstItem="X0T-2x-7yj" firstAttribute="top" secondItem="W6K-2y-nEX" secondAttribute="bottom" constant="8" id="1b1-36-Ckw"/>
+                            <constraint firstItem="2Ra-AE-WWm" firstAttribute="top" secondItem="X0T-2x-7yj" secondAttribute="bottom" constant="10" id="04Q-K0-BVw"/>
+                            <constraint firstItem="X0T-2x-7yj" firstAttribute="top" secondItem="W6K-2y-nEX" secondAttribute="bottom" constant="12" id="1b1-36-Ckw"/>
                             <constraint firstAttribute="trailing" secondItem="X0T-2x-7yj" secondAttribute="trailing" constant="8" id="2IT-d0-Kvh"/>
                             <constraint firstItem="2Ra-AE-WWm" firstAttribute="leading" secondItem="034-0B-ehm" secondAttribute="leading" constant="8" id="3W5-Hh-Sd2"/>
-                            <constraint firstItem="xNi-Pb-Aih" firstAttribute="centerX" secondItem="034-0B-ehm" secondAttribute="centerX" id="Agb-yL-hmU"/>
-                            <constraint firstItem="ufH-Rc-DqK" firstAttribute="top" secondItem="2Ra-AE-WWm" secondAttribute="bottom" constant="8" id="GHs-C8-foJ"/>
-                            <constraint firstAttribute="trailing" secondItem="ufH-Rc-DqK" secondAttribute="trailing" constant="8" id="PZd-31-pSx"/>
-                            <constraint firstItem="xNi-Pb-Aih" firstAttribute="centerY" secondItem="034-0B-ehm" secondAttribute="centerY" id="TKi-ff-S2X"/>
+                            <constraint firstItem="JRz-IV-3P2" firstAttribute="top" secondItem="2Ra-AE-WWm" secondAttribute="bottom" constant="10" id="3cT-W9-hKU"/>
+                            <constraint firstItem="G19-w2-3Ro" firstAttribute="leading" secondItem="034-0B-ehm" secondAttribute="leadingMargin" id="46K-JV-lhs"/>
+                            <constraint firstItem="G19-w2-3Ro" firstAttribute="top" secondItem="JRz-IV-3P2" secondAttribute="bottom" constant="25" id="4pS-R4-rpE"/>
+                            <constraint firstItem="5gF-kM-VgB" firstAttribute="top" secondItem="G19-w2-3Ro" secondAttribute="bottom" constant="70" id="ANS-CY-eUM"/>
                             <constraint firstAttribute="trailing" secondItem="2Ra-AE-WWm" secondAttribute="trailing" constant="8" id="Wtm-OW-wPh"/>
                             <constraint firstItem="X0T-2x-7yj" firstAttribute="leading" secondItem="034-0B-ehm" secondAttribute="leading" constant="8" id="cDq-aF-MCT"/>
-                            <constraint firstItem="ufH-Rc-DqK" firstAttribute="leading" secondItem="034-0B-ehm" secondAttribute="leading" constant="8" id="dRI-am-Tfb"/>
+                            <constraint firstItem="JRz-IV-3P2" firstAttribute="leading" secondItem="034-0B-ehm" secondAttribute="leading" constant="8" id="egv-Sy-mW2"/>
+                            <constraint firstItem="G19-w2-3Ro" firstAttribute="trailing" secondItem="034-0B-ehm" secondAttribute="trailingMargin" id="gIe-Cw-g9n"/>
+                            <constraint firstAttribute="trailing" secondItem="JRz-IV-3P2" secondAttribute="trailing" constant="8" id="h5W-LN-9xk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Check" id="Fob-lc-v6V">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="AUz-Ju-iRU">
                             <connections>
                                 <action selector="nextButtonAction:" destination="f6S-n3-V4g" id="ceH-Xb-16k"/>
-                                <segue destination="Dcg-lE-0oe" kind="show" identifier="nextAppointment" id="PN2-GP-62U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="diagnoseDescriptionText" destination="ufH-Rc-DqK" id="POO-sH-Tth"/>
+                        <outlet property="cameraButton" destination="4Z9-mO-if0" id="foU-Pi-uRA"/>
+                        <outlet property="diagnoseDescriptionText" destination="JRz-IV-3P2" id="BBH-ya-dmt"/>
                         <outlet property="diagnoseText" destination="2Ra-AE-WWm" id="76h-r8-vyk"/>
+                        <outlet property="drugButton" destination="9Hv-uC-KKf" id="cQb-im-HPr"/>
                         <outlet property="pathologicalCaseText" destination="X0T-2x-7yj" id="kFs-KH-LzR"/>
-                        <segue destination="qDl-au-vDF" kind="show" identifier="to Durgs Bulider" id="XY5-8v-BGS"/>
+                        <outlet property="uploadPhotoButton" destination="2b7-4H-WHt" id="B6F-6J-oEc"/>
+                        <segue destination="qDl-au-vDF" kind="show" identifier="toDurgsBulider" id="XY5-8v-BGS"/>
+                        <segue destination="Dcg-lE-0oe" kind="show" identifier="nextAppointment" id="KiP-lK-M3A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCb-fw-SqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="1191"/>
+            <point key="canvasLocation" x="2045.5999999999999" y="1190.5547226386807"/>
         </scene>
         <!--Title-->
         <scene sceneID="5pc-qi-qlG">
@@ -947,6 +1071,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="NsG-NQ-3Og">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="gdf-LH-D6S">
+                            <connections>
+                                <action selector="doneAction:" destination="qDl-au-vDF" id="gSE-ZA-hwT"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="C5b-Gx-cRw">
                                 <connections>
@@ -968,7 +1097,7 @@
         <!--Add Medication-->
         <scene sceneID="ldp-ny-vAX">
             <objects>
-                <viewController id="YMH-bc-eHC" customClass="MHAddMedicationViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="YMH-bc-eHC" customClass="MHAddMedicationViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mXz-Tx-dcM"/>
                         <viewControllerLayoutGuide type="bottom" id="ZxQ-ci-xjo"/>
@@ -1075,18 +1204,18 @@
                         <outlet property="noteForPharrmacyText" destination="7Qf-C0-MUW" id="sJI-5g-LG0"/>
                         <outlet property="startDateText" destination="UsK-nA-bax" id="yu4-u2-wNU"/>
                         <outlet property="whenNecessarySwitch" destination="1R3-HV-Wnn" id="Dze-qG-zab"/>
-                        <segue destination="xjC-Xv-J2Z" kind="show" identifier="to Bulider" id="Jgl-Cv-xM9"/>
+                        <segue destination="xjC-Xv-J2Z" kind="show" identifier="toBulider" id="Jgl-Cv-xM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Giy-9S-lOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="m99-86-Z0S" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="1905"/>
+            <point key="canvasLocation" x="2950" y="1930"/>
         </scene>
         <!--Medication Bulider-->
         <scene sceneID="P4c-Hu-ygz">
             <objects>
-                <viewController id="xjC-Xv-J2Z" customClass="MHMedicationBuliderViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xjC-Xv-J2Z" customClass="MHMedicationBuliderViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N0n-SG-RCs"/>
                         <viewControllerLayoutGuide type="bottom" id="n09-8c-2YZ"/>
@@ -1107,7 +1236,7 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OlE-VP-Bcw">
-                                <rect key="frame" x="0.0" y="169" width="375" height="449"/>
+                                <rect key="frame" x="0.0" y="169" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationBulider" id="b67-uN-KJw">
@@ -1151,9 +1280,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Medication Bulider" id="hug-z4-gcY">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="e5p-T2-F6i">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="xjC-Xv-J2Z" id="d0b-E8-Nup"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="EBo-ZY-DZy">
                             <connections>
-                                <segue destination="bnn-x6-afV" kind="unwind" unwindAction="unwindFromAddVC:" id="TgQ-w8-oWq"/>
+                                <action selector="saveButtonAction:" destination="xjC-Xv-J2Z" id="Fmv-0Y-KjE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1164,9 +1298,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhO-Wc-LZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bnn-x6-afV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5772" y="1934"/>
+            <point key="canvasLocation" x="2950" y="2674"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="d9B-MA-6UA">
@@ -1222,42 +1355,6 @@
             <point key="canvasLocation" x="1398" y="1847"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="g5G-T1-DCx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tS-ib-779" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s33-wV-tN6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yZu-fP-jA2" kind="relationship" relationship="rootViewController" id="6Jj-Tq-rPy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9R9-UE-faM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3244" y="2555.1724137931037"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="e3t-97-ENC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YiU-o8-lFM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zuU-tb-AAi">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="M37-aV-dwN" kind="relationship" relationship="rootViewController" id="wzt-03-qcv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gP9-BB-GSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1549.5999999999999" y="2554.2728635682161"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="KIL-N0-dry">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ldu-eq-waG" sceneMemberID="viewController">
@@ -1278,6 +1375,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clinicalPhoto" width="90" height="90"/>
         <image name="clock" width="29" height="29"/>
+        <image name="drugs" width="90" height="90"/>
+        <image name="laboratory" width="90" height="90"/>
+        <image name="photo" width="90" height="90"/>
+        <image name="radiology" width="90" height="90"/>
     </resources>
 </document>

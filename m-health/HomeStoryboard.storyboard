@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="THn-mG-TBX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="THn-mG-TBX">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -26,7 +26,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iey-UM-6jg">
                                 <rect key="frame" x="0.0" y="64" width="320" height="57"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.59999999999999998" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctorPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-OP-Ww2">
                                 <rect key="frame" x="131.5" y="92" width="57" height="57"/>
@@ -275,25 +275,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-ev-yRG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="544"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="676"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDp-b2-iKH" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="204" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="264" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWG-Mg-RJR" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="90" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="114" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOH-Sg-z7H" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="52" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="64" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Marital Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-ZY-kYK" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="242" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="314" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -301,12 +301,12 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identification Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fj-5a-DVv" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="14" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="14" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-5E-LUm" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="166" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="214" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -314,27 +314,27 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PaC-ev-o3e" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="280" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="364" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-xy-Nqk" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="128" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="164" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3SX-la-g48" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="356" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="464" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhJ-4B-vSa" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="318" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="414" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-eq-yNH" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="394" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="514" width="304" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
@@ -557,7 +557,7 @@
             </objects>
             <point key="canvasLocation" x="5657" y="867"/>
         </scene>
-        <!--Times View Controller-->
+        <!--Day Appointments-->
         <scene sceneID="vVm-Uo-xuI">
             <objects>
                 <viewController id="dU3-2U-fIF" customClass="MHTimesViewController" customModule="m_health" customModuleProvider="target" sceneMemberID="viewController">
@@ -596,11 +596,11 @@
                             <constraint firstItem="Pcl-qY-5mo" firstAttribute="leading" secondItem="rfW-Cc-zvZ" secondAttribute="leading" id="szF-Wj-rHu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Day Appointments" id="4WO-Ej-ACU"/>
                     <connections>
                         <outlet property="tableView" destination="Pcl-qY-5mo" id="Hfm-Fi-eYb"/>
-                        <segue destination="91p-Li-3WS" kind="show" id="aE2-iR-gRU">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="91p-Li-3WS" kind="show" id="aE2-iR-gRU"/>
+                        <segue destination="m4T-xK-SSO" kind="presentation" identifier="toPatientAppointment" id="Vqh-L8-OK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jby-D4-sqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,6 +679,7 @@
         <image name="setting" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Vqh-L8-OK2"/>
         <segue reference="a5e-22-U53"/>
     </inferredMetricsTieBreakers>
 </document>

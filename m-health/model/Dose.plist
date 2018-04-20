@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Dose</key>
+	<array>
+		<string>apply</string>
+		<string>apply sparingly </string>
+		<string>0.1 </string>
+		<string>0.25 </string>
+		<string>0.5</string>
+		<string>1</string>
+		<string>2</string>
+		<string>3</string>
+		<string>4</string>
+		<string>1-2</string>
+		<string>2-3</string>
+		<string>2-4</string>
+		<string>3-4</string>
+		<string>5</string>
+		<string>5-10</string>
+		<string>6</string>
+		<string>7</string>
+		<string>8</string>
+		<string>9</string>
+		<string>10</string>
+		<string>10-15</string>
+		<string>15</string>
+		<string>20</string>
+		<string>10-20</string>
+		<string>25</string>
+		<string>30</string>
+		<string>40</string>
+		<string>50</string>
+		<string>60</string>
+		<string>70</string>
+		<string>75</string>
+		<string>80</string>
+		<string>90</string>
+		<string>100</string>
+		<string>125</string>
+		<string>150</string>
+		<string>175</string>
+		<string>200</string>
+		<string>225</string>
+		<string>250</string>
+		<string>275</string>
+		<string>300</string>
+		<string>400</string>
+		<string>500</string>
+		<string>600</string>
+		<string>750</string>
+		<string>875</string>
+		<string>1000</string>
+	</array>
+	<key>unit</key>
+	<array>
+		<string>milligram(s)</string>
+		<string>milliliter(s)</string>
+		<string>gram(s)</string>
+		<string>unit(s)</string>
+		<string>international unit(s)</string>
+		<string>microgram(s)</string>
+		<string>each</string>
+		<string>inch(es)</string>
+		<string>milliequivalent(s)</string>
+		<string>drop(s)</string>
+		<string>applicatorful</string>
+		<string>scoop(s)</string>
+		<string>day(s)</string>
+		<string>hour(s)</string>
+		<string>minute(s)</string>
+		<string>suppository(ies)</string>
+		<string>gum</string>
+		<string>patch</string>
+		<string>lozenge</string>
+		<string>million unit(s)</string>
+		<string>centimeter(s)</string>
+		<string>millimole(s)</string>
+		<string>cap(s)</string>
+		<string>liter(s)</string>
+		<string>tab(s)</string>
+		<string>puff(s)</string>
+		<string>spray(s)</string>
+		<string>g/kg</string>
+		<string>international units/kg</string>
+		<string>mcg/kg</string>
+		<string>mEq/kg</string>
+		<string>mg/kg</string>
+		<string>mg/kg/day</string>
+		<string>mg/m2</string>
+		<string>mg/m2/day</string>
+		<string>mL/kg</string>
+		<string>mmol/kg</string>
+		<string>units/kg</string>
+		<string>units /kg/day</string>
+		<string>units /m2</string>
+		<string>mg/24h</string>
+		<string>week(s)</string>
+		<string>dose(s)</string>
+		<string>square centimeter</string>
+		<string>inhalation</string>
+		<string>packet(s)</string>
+		<string>insert</string>
+		<string>kit</string>
+		<string>-</string>
+		<string>gram/m2</string>
+		<string>application</string>
+		<string>nanogram(s)</string>
+		<string>ng/kg</string>
+		<string>parts per million</string>
+		<string>protein nitrogen unit</string>
+		<string>mega Becquerel(s)</string>
+		<string>millicurie</string>
+		<string>microcurie</string>
+		<string>mg/hr</string>
+		<string>mcg/hr</string>
+		<string>pump(s)</string>
+		<string>mcg/day</string>
+	</array>
+	<key>Route</key>
+	<array>
+		<string>Implant</string>
+		<string>Inhalation</string>
+		<string>Compounding</string>
+		<string>Injectable</string>
+		<string>Intra-articular</string>
+		<string>Intrabiliary</string>
+		<string>Intradermal</string>
+		<string>Intralymphatic</string>
+		<string>Intramuscular</string>
+		<string>Intraocular</string>
+		<string>Intraperitoneal</string>
+		<string>Intrathecal</string>
+		<string>Intratheceal</string>
+		<string>Intrauteral</string>
+		<string>Intravenous</string>
+		<string>Irrigation</string>
+		<string>Mucous membrane</string>
+		<string>Nasal</string>
+		<string>Ophthalmic</string>
+		<string>Oral</string>
+		<string>Oral and injectable</string>
+		<string>Oral transmucosal</string>
+		<string>Otic</string>
+		<string>Rectal</string>
+		<string>Subcutaneous</string>
+		<string>Sublingual</string>
+		<string>Topical</string>
+		<string>Transdermal</string>
+		<string>Transurethral</string>
+		<string>Vaginal</string>
+		<string>Buccal</string>
+		<string>Intravitreal</string>
+		<string>Intravesical</string>
+		<string>Oral and rectal</string>
+		<string>Oral and topical</string>
+		<string>Enteral</string>
+		<string>Percutaneous</string>
+		<string>Spinal</string>
+		<string>Parenteral</string>
+	</array>
+	<key>Frequency</key>
+	<array>
+		<string>3 times a day</string>
+		<string>3 times a week</string>
+		<string>4 times a day</string>
+		<string>5 times a day</string>
+		<string>every 18 hours</string>
+		<string>every 36 hours</string>
+		<string>every 48 hours</string>
+		<string>every 72 hours</string>
+		<string>every 7 days</string>
+		<string>every other day</string>
+		<string>once a day</string>
+		<string>once a month</string>
+		<string>once a week</string>
+		<string>2 times a day</string>
+		<string>2 times a week</string>
+		<string>every 15 minutes</string>
+		<string>every hour</string>
+		<string>10 times a day</string>
+		<string>12 times a day</string>
+		<string>16 times a day</string>
+		<string>6 times a day</string>
+		<string>7 times a day</string>
+		<string>8 times a day</string>
+		<string>every 16 hours</string>
+		<string>every 2 weeks</string>
+		<string>every 30 minutes</string>
+		<string>every 40 hours</string>
+		<string>yearly</string>
+		<string>9 times a day</string>
+		<string>every 6 weeks</string>
+		<string>3 times a day(after meals)</string>
+	</array>
+</dict>
+</plist>

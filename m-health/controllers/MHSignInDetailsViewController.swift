@@ -37,8 +37,8 @@ class MHSignInDetailsViewController: UIViewController {
             let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
             spiningActivity.label.text = "Sending"
             spiningActivity.detailsLabel.text = "Please Wait"
-            Connect.shared.registerdoctor(first_name: userInfo.firstName!, middle_name: userInfo.middleName!, last_name: userInfo.lastName!, password: userInfo.password!, email: userInfo.userName!, bio: userInfo.bio!, specilist: userInfo.specialist!, phone: ClincInfo.phone!, mobile: userInfo.mobile!, completed: {
-                Connect.shared.registerclinic(name: ClincInfo.clincName!, mobile: ClincInfo.mobile!, address: ClincInfo.address!, completed: {
+            DataClient.shared.registerdoctor(first_name: userInfo.firstName!, middle_name: userInfo.middleName!, last_name: userInfo.lastName!, password: userInfo.password!, email: userInfo.userName!, bio: userInfo.bio!, specilist: userInfo.specialist!, phone: ClincInfo.phone!, mobile: userInfo.mobile!, completed: {
+                DataClient.shared.registerclinic(name: ClincInfo.clincName!, mobile: ClincInfo.mobile!, address: ClincInfo.address!, completed: {
                     //do something
                       MBProgressHUD.hide(for: self.view, animated: true)
                     //self.dismiss(animated: true)
@@ -46,13 +46,13 @@ class MHSignInDetailsViewController: UIViewController {
 
                 }, failed: { (_ error) in
                     MBProgressHUD.hide(for: self.view, animated: true)
-                    let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true)
                 })
             }, failed: { (_ error) in
                 MBProgressHUD.hide(for: self.view, animated: true)
-                let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true)
             })

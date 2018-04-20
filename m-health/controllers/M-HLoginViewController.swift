@@ -12,6 +12,10 @@ class M_HLoginViewController: UIViewController {
 
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var sginUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +26,14 @@ class M_HLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loginButton.setAsCircle(cornerRadius: 8)
+        sginUpButton.setAsCircle(cornerRadius: 8)
+        userNameText.setBottomBorder(color: .black)
+        passwordText.setBottomBorder(color: .black)
+    }
+    
     
 
     /*
@@ -44,14 +56,14 @@ class M_HLoginViewController: UIViewController {
             let spiningActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
             spiningActivity.label.text = "Sending"
             spiningActivity.detailsLabel.text = "Please Wait"
-            Connect.shared.login(userName: userNameText.text!, password: passwordText.text!, completed: { (_ name, _ email, _ token) in
+            DataClient.shared.login(userName: userNameText.text!, password: passwordText.text!, completed: { (_ name, _ email, _ token) in
                  MBProgressHUD.hide(for: self.view, animated: true)
-                UserDefaults.standard.set(token, forKey: "token")
-                UserDefaults.standard.synchronize()
+//                UserDefaults.standard.set(token, forKey: "token")
+//                UserDefaults.standard.synchronize()
                 self.login()
             }, failed: { (_ error) in
                 MBProgressHUD.hide(for: self.view, animated: true)
-                let alert = UIAlertController(title: "Alert", message:error, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message:error.message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true)
             })

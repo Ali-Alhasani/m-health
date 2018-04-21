@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class DataClient{
+    var allRadiology = [Radiology]()
+    var allLaboratory = [Radiology]()
     class var shared: DataClient{
         struct Static{
             static let instance = DataClient()
@@ -19,7 +21,6 @@ class DataClient{
     
     private init() {}
     
-    //let token = UserDefaults.standard.object(forKey: "token") as? String
     
     func login(userName:String, password:String, completed: @escaping (_ name: String, _ email:String , _ token: String)-> () , failed: @escaping (_ error:LLError) -> () ){
         let functionUrl = "login"
@@ -91,7 +92,7 @@ class DataClient{
             let responseData = response as? [String : Any] ?? [:]
             var patient:Patients?
             patient = Patients(json: responseData)
-         
+            
             completed(patient!)
             
         }) { (_ error) in
@@ -105,7 +106,7 @@ class DataClient{
         
         APIClient.sendRequest(path: functionUrl, httpMethod: .get, parameters: [:], success: { (response) in
             let responseData = response as? [[String : Any]] ?? [[:]]
-    
+            
             var patinets = [Patients]()
             responseData.forEach({ (data) in
                 patinets.append(Patients(json: data))
@@ -126,7 +127,7 @@ class DataClient{
         APIClient.sendRequest(path: functionUrl, httpMethod: .get, parameters: [:], success: { (response) in
             let responseData = response as? [String : Any] ?? [:]
             let json = JSON(responseData)
-        
+            
             let specilist = json["specilist"].stringValue
             let clinicName = json["clinic_name"].stringValue
             let address = json["address"].stringValue
@@ -137,29 +138,7 @@ class DataClient{
             failed(error)
         }
     }
-    //    func diagnose(patient_id:String, arival_case:String,payed:String,importance:String,diagnose:String,diagnose_description:String,pathological_case:String){
-    //
-    //    }
-    //    func drugs(name:String, dose:String,route:String,frequency:String,direction:String,duration:String,note:String,indication:String,necessary_flag:String,start_date:String,end_date:String,internal_note:String){
-    //
-    //    }
-    //    func nextAppointment(appointment_date:String, appointment_time:String){
-    //
-    //    }
-    //    func laboratory(laboratory_name:String, note:String){
-    //
-    //    }
-    //    func radiology(radiology_name:String, note:String){
-    //
-    // }
-    
-    //
-    //    "diagnose":{"patient_id":"889866","doctor_id":"10","arival_case":"fuck","payed":"1","importance":"true","diagnose":"fuck you","diagnose_description":"diagnose_description"},
-    //    "appointment":{"pathological_case":"pathological_case","status":"none"},
-    //    "drugs":[{"id":"1","name":"fuck","dose":"dose","route":"route","frequency":"2","direction":"direction","duration":"duration","indication":"indication","necessary_flag":"true","internal_note":"internal_note" , "side_effects":"side_effects"}],
-    //    "next_appointment":{},
-    //    "laboratory":{"laboratory_name":"name","note":"note"},
-    //    "radiology":{"radiology_name":"name"}
+ 
     func createDiagnose (patient_id:Int, arival_case:String,payed:Int,importance:String,diagnose:String,diagnose_description:String,pathological_case:String,status:String,allDrugs:[Drugs],appointment_date:String, appointment_time:String,laboratory:Radiology?, radiology:Radiology?,completed: @escaping (_ message:String)-> () , failed: @escaping (_ error:LLError) -> () ){
         let functionUrl =  "appoiment/all/create"
         
@@ -181,7 +160,7 @@ class DataClient{
             let tmpLaboratory:JSON = ["laboratory_name":laboratory.name ?? "" ,"note": laboratory.note ?? ""]
             parameters = ["diagnose":diagnose,"appointment":appointment,"drugs":allDurges,"next_appointment":next_appointment, "radiology":tmpRadiology,"laboratory" : tmpLaboratory] as [String : Any]
         }
-    
+        
         
         
         
@@ -206,21 +185,56 @@ class DataClient{
             let responseData = response as? [[String : Any]] ?? [[:]]
             var doctorappointments = [Appointment]()
             responseData.forEach({ (data) in
-              doctorappointments.append(Appointment(json: data))
+                doctorappointments.append(Appointment(json: data))
             })
-//            for tmp in appointments {
-//                let appointmentID = tmp["appointment_id"].intValue
-//                let socialId = tmp["social_id"].intValue
-//                let patientName = tmp["patient_name"].stringValue
-//                let note = tmp["note"].stringValue
-//                let status = tmp["status"].stringValue
-//                let date = tmp["date"].stringValue
-//                let time = tmp["time"].stringValue
-//
-//                doctorappointments.append(Appointment(appointmentID: appointmentID, socialID: socialId, patientName: patientName, note: note, status: status, time: time, date: date))
-//
-//            }
             completed(doctorappointments)
+        }) { (_ error) in
+            failed(error)
+        }
+    }
+    
+    
+    func getAllRadiology(completed: @escaping ()-> () , failed: @escaping (_ error:LLError) -> () ){
+       allRadiology.removeAll()
+          let functionUrl = "radiology"
+        APIClient.sendRequest(path: functionUrl, httpMethod: .get, parameters: [:], success: { (response) in
+            let responseData = response as? [[String : Any]] ?? [[:]]
+            responseData.forEach({ (data) in
+                self.allRadiology.append(Radiology(json: data))
+            })
+            completed()
+        }) { (_ error) in
+            failed(error)
+        }
+    }
+    
+    
+    func getAllLaboratory(completed: @escaping ()-> () , failed: @escaping (_ error:LLError) -> () ){
+        allLaboratory.removeAll()
+          let functionUrl = "laboratory"
+        APIClient.sendRequest(path: functionUrl, httpMethod: .get, parameters: [:], success: { (response) in
+            let responseData = response as? [[String : Any]] ?? [[:]]
+            responseData.forEach({ (data) in
+                self.allLaboratory.append(Radiology(json: data))
+            })
+            completed()
+        }) { (_ error) in
+            failed(error)
+        }
+    }
+    
+    
+    func getPatientDrugs(patientSocialId:String,completed: @escaping (_ drugs:[Drugs])-> () , failed: @escaping (_ error:LLError) -> () ){
+        
+           let functionUrl = "patient/drugs/\(patientSocialId)"
+       
+        APIClient.sendRequest(path: functionUrl, httpMethod: .get, parameters: [:], success: { (response) in
+            let responseData = response as? [[String : Any]] ?? [[:]]
+            var drugs = [Drugs]()
+            responseData.forEach({ (data) in
+                drugs.append(Drugs(json: data))
+            })
+            completed(drugs)
         }) { (_ error) in
             failed(error)
         }

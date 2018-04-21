@@ -7,11 +7,20 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 class Radiology {
     
+    init(json: [String: Any]) {
+        let json =  JSON(json)
+        self.id = json["id"].intValue
+        self.name = json["name"].stringValue
+    }
     
+    init(){
+        
+    }
+    var id:Int?
     var name:String?
     var note:String?
 }

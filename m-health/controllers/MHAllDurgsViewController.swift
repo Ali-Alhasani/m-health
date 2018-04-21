@@ -23,6 +23,7 @@ class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableV
      weak var delegate: AllDurgsViewControllerDelegate?
     
     var allDurgs = [Drugs]()
+    var socialId:String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,8 +36,8 @@ class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableV
     }
     
     
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
     
         return allDurgs.count
     }
@@ -52,11 +53,19 @@ class MHAllDurgsViewController: UIViewController,UITableViewDataSource ,UITableV
         delegate?.AllDurgsViewController(self, didFinishAdding: allDurgs)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toDrugsHistory"{
+            let vc = segue.destination as! MHPatientDrugsHistoryViewController
+            vc.socialId = socialId!
+        }
+    }
+    
      @IBAction func unwindFromAddVC2(_ sender: UIStoryboardSegue){
         if sender.source is MHAddMedicationViewController {
             if let senderVC = sender.source as? MHAddMedicationViewController {
                 
-                allDurgs.append(senderVC.durgs)
+            allDurgs.append(senderVC.durgs)
             tableView.reloadData()
             }
         }

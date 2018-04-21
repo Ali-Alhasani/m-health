@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.7.1)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - FSCalendar (2.7.9)
+  - IQKeyboardManagerSwift (6.0.0)
+  - ISTimeline (1.0.0)
+  - JVFloatLabeledTextField (1.2.1)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireImage
+  - FSCalendar
+  - IQKeyboardManagerSwift
+  - ISTimeline
+  - JVFloatLabeledTextField
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  IQKeyboardManagerSwift: 624f128983eec795deacd50c1cd2f72664d13f08
+  ISTimeline: 1b5c01c76724b3ba3b41a07e508a271e93cd82ad
+  JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 6987fc89903d3fe17d5f38de7d54eca36287d5e0
+
+COCOAPODS: 1.4.0

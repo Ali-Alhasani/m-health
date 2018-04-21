@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MHNextAppointmentViewController: UIViewController,AddRadiologyViewControllerDelegate,AddLaboratoryViewControllerDelegate {
+class MHNextAppointmentViewController: UIViewController,AddRadiologyViewControllerDelegate,AddLaboratoryViewControllerDelegate,UITextFieldDelegate  {
     
     func LaboratoryViewController(_ controller: MHAddLaboratoryViewController, didFinishAdding item: Radiology) {
          self.laborttory = item
@@ -39,7 +39,8 @@ class MHNextAppointmentViewController: UIViewController,AddRadiologyViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nextAppointmentDateText.delegate = self
+        nextAppointmentTimeText.delegate = self
         // Do any additional setup after loading the view.
         let imageOrigin : CGFloat =  25
         let textTop : CGFloat = imageOrigin + 40 + gap/2
@@ -74,6 +75,41 @@ class MHNextAppointmentViewController: UIViewController,AddRadiologyViewControll
             
             
         }
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        if(textField == nextAppointmentDateText){
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = UIDatePickerMode.date
+            textField.inputView = datePicker
+            datePicker.addTarget(self, action: #selector(self.datePickerchanged(sender:)), for: .valueChanged)
+        }
+        if(textField == nextAppointmentTimeText){
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = UIDatePickerMode.time
+            textField.inputView = datePicker
+            datePicker.addTarget(self, action: #selector(self.timeDiveChanged), for: .valueChanged)
+        }
+    
+    }
+    
+    @objc func datePickerchanged(sender: UIDatePicker) {
+        nextAppointmentDateText.text = format().string(from: sender.date)
+    }
+  
+    @objc func timeDiveChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        nextAppointmentTimeText.text = formatter.string(from: sender.date)
+    }
+    
+    func format() -> DateFormatter{
+        let format = DateFormatter()
+        format.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?
+        format.dateFormat = "yyyy-MM-dd"
+        return format
     }
     
     @IBAction func finishButton(_ sender: Any) {

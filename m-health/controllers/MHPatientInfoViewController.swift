@@ -20,6 +20,13 @@ class MHPatientInfoViewController: UIViewController {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var startVisitButton: UIButton!
     @IBOutlet weak var vitalsButton: UIButton!
+    @IBOutlet weak var preRequestButton: UIButton!
+    
+    
+    let gap : CGFloat = 8
+    let borderSize : CGFloat = 1
+    let textHeight : CGFloat = 13
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +44,17 @@ class MHPatientInfoViewController: UIViewController {
         avatarImage.setAsCircle(cornerRadius: 35, borderColor: .gray, borderWidth: 0.5)
          startVisitButton.setAsCircle(cornerRadius: 6)
           vitalsButton.setAsCircle(cornerRadius: 6)
+        
+       // 75 - 10 = 65 - 40 = 15 - 4 = 11
+        let imageOrigin : CGFloat =  10
+        let textTop : CGFloat = imageOrigin + 48 + gap/2
+        let textBottom : CGFloat = gap + 2
+        let imageBottom : CGFloat = textBottom + textHeight + gap/2
+        
+        preRequestButton.setAsCircle(cornerRadius: 5, borderColor: .gray, borderWidth: 0.5)
+        preRequestButton.imageEdgeInsets = UIEdgeInsets(top: 4, left: imageOrigin, bottom: imageBottom, right: imageOrigin)
+        
+        preRequestButton.titleEdgeInsets = UIEdgeInsets(top: textTop, left: -(preRequestButton!.imageView?.image?.size.width)!, bottom: textBottom, right: 0.0)
         // Do any additional setup after loading the view.
     }
     
@@ -66,6 +84,9 @@ class MHPatientInfoViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addCheck" {
             let navVc = segue.destination as! MHAddCheckViewController
+            navVc.socailId = socailId
+        }else  if segue.identifier == "toPatientInfo"{
+            let navVc = segue.destination as! MHEditPatientInfoViewController
             navVc.socailId = socailId
         }
      }

@@ -62,8 +62,8 @@ class MHPatientSearchViewController: UIViewController,UITableViewDataSource ,UIT
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         if isFiltering() {
             return filtered.count
         }

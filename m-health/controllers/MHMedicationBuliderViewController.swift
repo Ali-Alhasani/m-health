@@ -72,8 +72,8 @@ class MHMedicationBuliderViewController: UIViewController,UITableViewDataSource 
         }
     }
     
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         
         if(buliderSegment.selectedSegmentIndex == 0){
             return (Dose?.count)!

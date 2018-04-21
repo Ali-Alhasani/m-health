@@ -19,6 +19,8 @@
 		6B13E0E91FCF2A1E0022BDB8 /* Dose.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B13E0E81FCF2A1E0022BDB8 /* Dose.plist */; };
 		6B13E0ED1FCF3CBF0022BDB8 /* MHAddMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13E0EC1FCF3CBF0022BDB8 /* MHAddMedicationViewController.swift */; };
 		6B1FF0D41FC5995A0068D347 /* DataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1FF0D31FC5995A0068D347 /* DataClient.swift */; };
+		6B299C26208A0FF40003C0EF /* MHPatientDrugsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B299C25208A0FF40003C0EF /* MHPatientDrugsHistoryViewController.swift */; };
+		6B299C28208BD3140003C0EF /* MHEditPatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B299C27208BD3140003C0EF /* MHEditPatientInfoViewController.swift */; };
 		6B3979611E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3979601E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift */; };
 		6B3979631E60586300BC9DAC /* DiagnoseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3979621E60586300BC9DAC /* DiagnoseDetails.swift */; };
 		6B4BA33B1E6029FC0029204B /* DiagnosisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BA33A1E6029FC0029204B /* DiagnosisStoryboard.storyboard */; };
@@ -80,6 +82,8 @@
 		6B13E0EC1FCF3CBF0022BDB8 /* MHAddMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAddMedicationViewController.swift; sourceTree = "<group>"; };
 		6B1FF0D31FC5995A0068D347 /* DataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClient.swift; sourceTree = "<group>"; };
 		6B1FF0D51FC59CDD0068D347 /* m-health-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "m-health-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B299C25208A0FF40003C0EF /* MHPatientDrugsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPatientDrugsHistoryViewController.swift; sourceTree = "<group>"; };
+		6B299C27208BD3140003C0EF /* MHEditPatientInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHEditPatientInfoViewController.swift; sourceTree = "<group>"; };
 		6B3979601E60576F00BC9DAC /* MHDiagnoseDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDiagnoseDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		6B3979621E60586300BC9DAC /* DiagnoseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseDetails.swift; sourceTree = "<group>"; };
 		6B4BA33A1E6029FC0029204B /* DiagnosisStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiagnosisStoryboard.storyboard; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				6B9F0EBD2081666E00D38873 /* MHPatientHistoryViewController.swift */,
 				6BC7A6972088C9AC0033DAA4 /* MHAddLaboratoryViewController.swift */,
 				6BC7A6992088C9CE0033DAA4 /* MHAddRadiologyViewController.swift */,
+				6B299C25208A0FF40003C0EF /* MHPatientDrugsHistoryViewController.swift */,
+				6B299C27208BD3140003C0EF /* MHEditPatientInfoViewController.swift */,
 			);
 			name = DiagnoiseControllers;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				6BB7ACE81F6948A1001AB239 /* MHDoctorHomeViewController.swift in Sources */,
 				6BB7ACEA1F694989001AB239 /* MHSearchViewController.swift in Sources */,
 				6B9F0EBC207FE29800D38873 /* LLError.swift in Sources */,
+				6B299C28208BD3140003C0EF /* MHEditPatientInfoViewController.swift in Sources */,
 				6BC999011E276B7A00CD699B /* AppDelegate.swift in Sources */,
 				6BD6A67F1FCFFAAE00D0F139 /* MHNextAppointmentViewController.swift in Sources */,
 				6BB7ACDB1F687F58001AB239 /* Usrers.swift in Sources */,
@@ -499,6 +506,7 @@
 				6BC7A69620882F1B0033DAA4 /* TextView.swift in Sources */,
 				6B4BA33D1E6030C30029204B /* MHAddCheckViewController.swift in Sources */,
 				6BB7ACFB1F6959E1001AB239 /* MHUpdateDoctorInfoViewController.swift in Sources */,
+				6B299C26208A0FF40003C0EF /* MHPatientDrugsHistoryViewController.swift in Sources */,
 				6B0E27151E36424F0062D934 /* M-HLoginViewController.swift in Sources */,
 				6B9F0EB8207FE1EC00D38873 /* APIClient.swift in Sources */,
 				6BB7ACEC1F694A40001AB239 /* MHPatientSearchViewController.swift in Sources */,

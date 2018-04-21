@@ -145,6 +145,7 @@ class MHAddCheckViewController: UIViewController,UITextFieldDelegate,UITextViewD
         if segue.identifier == "toDurgsBulider"{
             let vc = segue.destination as! MHAllDurgsViewController
             vc.delegate = self
+            vc.socialId = socailId!
         }else if segue.identifier == "nextAppointment"{
       let vc = segue.destination as! MHNextAppointmentViewController
             vc.diagnose = diagnoseText.text!

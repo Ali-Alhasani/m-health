@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 class Drugs{
     
@@ -31,6 +31,13 @@ class Drugs{
         self.id = id
         self.sideEffects = sideEffects
         
+    }
+    
+    init(json: [String: Any]) {
+        let json =  JSON(json)
+        self.id = json["id"].intValue
+        self.name = json["name"].stringValue
+        self.sideEffects = json["side_effects"].stringValue
     }
     var id:Int?
     var name:String?

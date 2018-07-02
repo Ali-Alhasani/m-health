@@ -51,7 +51,7 @@ class MHTimesViewController: UIViewController,UITableViewDataSource ,UITableView
 //                destine
 //            }
             if let index = sender as? IndexPath {
-                   targetController.socailId = self.doctorappointments[index.row].socialID
+                targetController.socailId = self.doctorappointments[index.row].socialID
             }
          
         }

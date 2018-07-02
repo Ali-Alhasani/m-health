@@ -28,7 +28,7 @@ class DataClient{
         APIClient.sendRequest(path: functionUrl, httpMethod: .post, parameters: parameters, success: { (response) in
             let responseData = response as? [String : Any] ?? [:]
             let json = JSON(responseData)
-            let name = json["first_name"].stringValue
+            let name = json["first_name"].stringValue +  json["last_name"].stringValue
             let email = json["email"].stringValue
             let token = json["token"].stringValue
             SessionManager.shared.token = token
@@ -150,7 +150,7 @@ class DataClient{
         
         var drugs = [[String:Any]]()
         for i in allDrugs{
-            drugs.append(["name" :i.name! ,"dose" :i.dose!,"route":i.route!, "frequency":i.frequency!,"direction":i.direction!,"duration":i.duration!,"note":i.note!,"indication":i.indication!,"necessary_flag":"false","start_date":i.startDate!,"end_date":i.endDate!,"internal_note":i.internalNote!,"side_effects":i.sideEffects!,"id":i.id!])
+            drugs.append(["name" :i.name! ,"dose" :i.dose!,"route":i.route!, "frequency":i.frequency!,"direction":i.direction!,"duration":i.duration!,"note":i.note!,"indication":i.indication!,"necessary_flag":"false","start_date":i.startDate!,"end_date":i.endDate!,"internal_note":i.internalNote!,"side_effects":"i.sideEffects!","id":"i.id!"])
         }
         let allDurges = JSON(drugs)
         var parameters = ["diagnose":diagnose,"appointment":appointment,"drugs":allDurges,"next_appointment":next_appointment] as [String : Any]
@@ -164,7 +164,7 @@ class DataClient{
         
         
         
-        APIClient.sendRequest(path: functionUrl, httpMethod: .post, parameters: parameters, success: { (response) in
+        APIClient.sendRequest2(path: functionUrl, httpMethod: .post, parameters: parameters, success: { (response) in
             let responseData = response as? [String : Any] ?? [:]
             let json = JSON(responseData)
             
